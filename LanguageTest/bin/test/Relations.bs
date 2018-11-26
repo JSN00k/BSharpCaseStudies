@@ -1,0 +1,28 @@
+package test
+
+Import main.*
+ 
+Class ReflexRel<S> : S × S → Bool where ∀ x : S · ReflexRel(x, x) { }
+
+Class SymetricRel<T> : T × T → Bool where ∀ x : T, y : T · SymetricRel(x, y) ⇔ SymetricRel(y, x) { }
+
+Extend ReflexRel (Theory) { 
+	Theorems {
+	Reflexive:
+		∀ x : S · ReflexRel(x, x);
+	}
+}
+
+Class TransRel<T> : T × T → Bool where ∀ x, y, z : T · TransRel(x, y) ∧ TransRel(y, z) ⇒ TransRel(x, z) {
+} 
+
+Class EquivRel<T> : ReflexRel<T>, SymetricRel<T>, TransRel<T> { 
+	Theorems {
+		TransInverse:
+			∀ x, y, z : T  · EquivRel(x, y) ∧ ¬ EquivRel(y, z) ⇒ ¬ EquivRel(x, z);
+		TransRewrite:
+			∀ x, y, z : T · EquivRel(x, y) ⇒ EquivRel(x, z) = EquivRel(y, z);
+	}
+} 
+ 
+Class Setoid<T> : T (equ : EquivRel<T>) { }

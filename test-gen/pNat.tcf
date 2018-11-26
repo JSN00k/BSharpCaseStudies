@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.scTheoryRoot org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.theory.core.thy" org.eventb.core.source="/test-gen/pNat.tuf">
+<org.eventb.theory.core.scImportTheoryProject name="'" org.eventb.core.source="/test-gen/pNat.tuf|org.eventb.theory.core.theoryRoot#pNat|org.eventb.theory.core.importTheoryProject#'" org.eventb.theory.core.importTheoryProject="/test-gen">
+<org.eventb.theory.core.scImportTheory name="'" org.eventb.core.source="/test-gen/pNat.tuf|org.eventb.theory.core.theoryRoot#pNat|org.eventb.theory.core.importTheoryProject#'|org.eventb.theory.core.importTheory#'" org.eventb.theory.core.importTheory="/test-gen/pNat0.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat0"/>
+<org.eventb.theory.core.scImportTheory name="(" org.eventb.core.source="/test-gen/pNat.tuf|org.eventb.theory.core.theoryRoot#pNat|org.eventb.theory.core.importTheoryProject#'|org.eventb.theory.core.importTheory#(" org.eventb.theory.core.importTheory="/test-gen/Monoid.dtf|org.eventb.theory.core.deployedTheoryRoot#Monoid"/>
+</org.eventb.theory.core.scImportTheoryProject>
+</org.eventb.theory.core.scTheoryRoot>

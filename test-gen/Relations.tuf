@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/test-gen">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/test-gen/main.dtf|org.eventb.theory.core.deployedTheoryRoot#main"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="ReflexRel_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(S_EvB)" org.eventb.core.identifier="S"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ super ∣ super ∈ S × S → BOOL ∧ (∀x·x ∈ S ⇒ super(x ↦ x) = TRUE)}"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.typeParameter name=")" org.eventb.core.identifier="S_EvB"/>
+<org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="SymetricRel_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ super ∣ super ∈ T × T → BOOL ∧ (∀x, y·x ∈ T ∧ y ∈ T ⇒ ((super(x ↦ y) = TRUE)⇔(super(y ↦ x) = TRUE)))}"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.typeParameter name="+" org.eventb.core.identifier="T_EvB"/>
+<org.eventb.theory.core.newOperatorDefinition name="," org.eventb.core.label="TransRel_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ super ∣ super ∈ T × T → BOOL ∧ (∀x, y, z·x ∈ T ∧ y ∈ T ∧ z ∈ T ⇒ (((super(x ↦ y) = TRUE)∧(super(y ↦ z) = TRUE))⇒(super(x ↦ z) = TRUE)))}"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="-" org.eventb.core.label="EquivRel_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ super ∣ super ∈ ReflexRel_T(T) ∩ SymetricRel_T(T) ∩ TransRel_T(T)}"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="TransInverse:" org.eventb.core.predicate="∀T, EquivRel, x, y, z·T ∈ ℙ(T_EvB) ∧ EquivRel ∈ EquivRel_T(T) ∧ x ∈ T ∧ y ∈ T ∧ z ∈ T ⇒ (((EquivRel(x ↦ y) = TRUE)∧¬(EquivRel(y ↦ z) = TRUE))⇒¬(EquivRel(x ↦ z) = TRUE))"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="TransRewrite:" org.eventb.core.predicate="∀T, EquivRel, x, y, z·T ∈ ℙ(T_EvB) ∧ EquivRel ∈ EquivRel_T(T) ∧ x ∈ T ∧ y ∈ T ∧ z ∈ T ⇒ ((EquivRel(x ↦ y) = TRUE)⇒((EquivRel(x ↦ z))=(EquivRel(y ↦ z))))"/>
+<org.eventb.theory.core.newOperatorDefinition name="0" org.eventb.core.label="Setoid_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ super ↦ equ ∣ super = T ∧ equ ∈ EquivRel_T(T)}"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="1" org.eventb.core.label="Setoid_equ" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Setoid_T(T)" org.eventb.core.identifier="Setoid"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj2(Setoid)"/>
+</org.eventb.theory.core.newOperatorDefinition>
+</org.eventb.theory.core.theoryRoot>

@@ -1,0 +1,20 @@
+package test
+
+Import Relations.*
+Operators.*
+
+Class Monoid : Setoid (ident : Monoid, op : AssocOp<Monoid>) 
+where ∀ x : Monoid · equ(op(x, ident), x) ∧ equ(op(ident, x), x) {
+	Theorems {
+		ident:
+			∀ x : Monoid · equ(op(x, ident), ident) ⇔ equ(x,  ident);
+			
+		2 left ident no right:
+			∀ l1, l2 : Monoid · (∀ x : Monoid · equ(op(l1, x), x))  ∧  (∀ y : Monoid · equ(op(l2, y), y)) ∧ ¬ equ(l1, l2)
+			⇒ ¬(∃ r : Monoid · ∀ z : Monoid · equ(op(z, r),  z));
+			
+		2 right ident no left:
+			∀ r1, r2 : Monoid · (∀ x : Monoid · equ(op(x, r1), x))  ∧  (∀ y : Monoid · equ(op(y, r2), y)) ∧ ¬ equ(r1, r2)
+			⇒ ¬(∃ l : Monoid · ∀ z : Monoid · equ(op(z, l),  z));
+	}
+}

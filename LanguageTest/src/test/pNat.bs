@@ -1,0 +1,24 @@
+package test
+
+Datatype pNat
+| zero
+| suc(prev : pNat) {
+	add(x, y : pNat) : pNat INFIX 100
+		match x {
+			| zero : y
+			| suc(xs) : suc(xs add y)
+		}
+	
+	times(x, y : pNat) : pNat INFIX 200 y
+	
+	Theorems {
+		distrib:
+			∀ x, y, z : pNat · x times y add x times z = x times (y add z);
+	}
+}
+
+Import Monoid
+
+Extend pNat (mon_Add) {
+	
+}

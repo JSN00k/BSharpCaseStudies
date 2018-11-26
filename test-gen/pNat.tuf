@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/test-gen">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/test-gen/pNat0.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat0"/>
+<org.eventb.theory.core.importTheory name="(" org.eventb.theory.core.importTheory="/test-gen/Monoid.dtf|org.eventb.theory.core.deployedTheoryRoot#Monoid"/>
+</org.eventb.theory.core.importTheoryProject>
+</org.eventb.theory.core.theoryRoot>

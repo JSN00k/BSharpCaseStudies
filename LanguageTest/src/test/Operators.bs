@@ -1,0 +1,5 @@
+package test
+
+Import Relations.Setoid
+ 
+Class AssocOp<T:Setoid> : T × T → T where ∀ x, y, z : T · T.equ(AssocOp(x, AssocOp(y, z)),  AssocOp(AssocOp(x, y), z)) { }

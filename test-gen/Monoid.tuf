@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/test-gen">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/test-gen/Relations.dtf|org.eventb.theory.core.deployedTheoryRoot#Relations"/>
+<org.eventb.theory.core.importTheory name="(" org.eventb.theory.core.importTheory="/test-gen/Operators.dtf|org.eventb.theory.core.deployedTheoryRoot#Operators"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="Monoid_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ super ↦ (ident ↦ op) ∣ super ∈ Setoid_T(T) ∧ ident ∈ T ∧ op ∈ AssocOp_T(prj1(super), super) ∧ (∀x·x ∈ T ⇒ ((Setoid_equ(T, super)(op(x ↦ ident) ↦ x)= TRUE)∧(Setoid_equ(T, super)(op(ident ↦ x) ↦ x)= TRUE)))}"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.typeParameter name=")" org.eventb.core.identifier="T_EvB"/>
+<org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="Monoid_equ" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Monoid_T(T)" org.eventb.core.identifier="Monoid"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="Setoid_equ(T, prj1(Monoid))"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="Monoid_ident" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Monoid_T(T)" org.eventb.core.identifier="Monoid"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj1(prj2(Monoid))"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="," org.eventb.core.label="Monoid_op" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Monoid_T(T)" org.eventb.core.identifier="Monoid"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj2(prj2(Monoid))"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="ident:" org.eventb.core.predicate="∀T, equ, ident, op, x·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ (ident ↦ op) ∈ Monoid_T(T) ∧ x ∈ T ⇒ ((equ(op(x ↦ ident) ↦ ident)= TRUE)⇔(equ(x ↦ ident)= TRUE))"/>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="2 left ident no right:" org.eventb.core.predicate="∀T, equ, ident, op, l1, l2·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ (ident ↦ op) ∈ Monoid_T(T) ∧ l1 ∈ T ∧ l2 ∈ T ⇒ ((((∀x·x ∈ T ⇒ equ(op(l1 ↦ x) ↦ x)= TRUE)∧(∀y·y ∈ T ⇒ equ(op(l2 ↦ y) ↦ y)= TRUE))∧¬(equ(l1 ↦ l2)= TRUE))⇒¬(∃r·r ∈ T ∧ ∀z·z ∈ T ⇒ equ(op(z ↦ r) ↦ z)= TRUE))"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="2 right ident no left:" org.eventb.core.predicate="∀T, equ, ident, op, r1, r2·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ (ident ↦ op) ∈ Monoid_T(T) ∧ r1 ∈ T ∧ r2 ∈ T ⇒ ((((∀x·x ∈ T ⇒ equ(op(x ↦ r1) ↦ x)= TRUE)∧(∀y·y ∈ T ⇒ equ(op(y ↦ r2) ↦ y)= TRUE))∧¬(equ(r1 ↦ r2)= TRUE))⇒¬(∃l·l ∈ T ∧ ∀z·z ∈ T ⇒ equ(op(z ↦ l) ↦ z)= TRUE))"/>
+</org.eventb.theory.core.theoryRoot>
