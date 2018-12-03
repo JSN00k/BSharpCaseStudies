@@ -1,0 +1,28 @@
+package test
+
+Import Relations.*
+Operators.*
+
+Class SemiGroup[SG] : Setoid (op : AssocOp<SG>) {
+	Theorems {
+		2 left ident no right:
+			∀ l1, l2 : SG · (∀ x : SG · equ(op(l1, x), x))  ∧  (∀ y : SG · equ(op(l2, y), y)) ∧ ¬ equ(l1, l2)
+			⇒ ¬(∃ r : SG · ∀ z : SG · equ(op(z, r),  z));
+			
+		2 right ident no left:
+			∀ r1, r2 : SG · (∀ x : SG · equ(op(x, r1), x))  ∧  (∀ y : SG · equ(op(y, r2), y)) ∧ ¬ equ(r1, r2)
+			⇒ ¬(∃ l : SG · ∀ z : SG · equ(op(l, z),  z));
+			
+		left right ident is unique1:
+			∀ LRident, Rident : SG · (∀ x : SG · equ(op(LRident, x), x) ∧ equ(op(x, LRident), x) 
+				∧ (∀ y : SG · equ(op(y, Rident), y))) ⇒ equ(LRident, Rident);
+				
+		left right ident is unique2:
+			∀ LRident, Lident : SG · (∀ x : SG ·  equ(op(LRident, x), x) ∧ equ(op(x, LRident), x) 
+				∧ (∀ y : SG · equ(op(Lident, y), y))) ⇒ equ(Lident, LRident);
+				
+		left right ident is unique:
+			∀ LRident, LorRident : SG · (∀ x : SG · equ(op(LRident, x), x) ∧ equ(op(x, LRident), x) 
+				∧ ((∀ y :SG · equ(op(LorRident, y), y)) ∨ (∀ z : SG · equ(op(z, LorRident), z)))) ⇒ equ(LorRident, LRident);
+	}
+}

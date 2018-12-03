@@ -2,27 +2,25 @@ package test
 
 Import main.*
  
-Class ReflexRel<S> : S × S → Bool where ∀ x : S · ReflexRel(x, x) { }
+Class ReflexRel<T>[r] : T × T → Bool where ∀ x : T · r(x, x) { }
 
-Class SymetricRel<T> : T × T → Bool where ∀ x : T, y : T · SymetricRel(x, y) ⇔ SymetricRel(y, x) { }
-
-Extend ReflexRel (Theory) { 
+Class SymetricRel<T>[s] : T × T → Bool where ∀ x : T, y : T · s(x, y) ⇒ s(y, x) {
 	Theorems {
-	Reflexive:
-		∀ x : S · ReflexRel(x, x);
+		sym iff:
+			∀ x, y : T · s(x, y) ⇔ s(y, x);
 	}
 }
 
-Class TransRel<T> : T × T → Bool where ∀ x, y, z : T · TransRel(x, y) ∧ TransRel(y, z) ⇒ TransRel(x, z) {
+Class TransRel<T>[t] : T × T → Bool where ∀ x, y, z : T · t(x, y) ∧ t(y, z) ⇒ t(x, z) {
 } 
 
-Class EquivRel<T> : ReflexRel<T>, SymetricRel<T>, TransRel<T> { 
+Class EquivRel<T>[e] : ReflexRel<T>, SymetricRel<T>, TransRel<T> { 
 	Theorems {
 		TransInverse:
-			∀ x, y, z : T  · EquivRel(x, y) ∧ ¬ EquivRel(y, z) ⇒ ¬ EquivRel(x, z);
+			∀ x, y, z : T  · e(x, y) ∧ ¬ e(y, z) ⇒ ¬ e(x, z);
 		TransRewrite:
-			∀ x, y, z : T · EquivRel(x, y) ⇒ EquivRel(x, z) = EquivRel(y, z);
+			∀ x, y, z : T · e(x, y) ⇒ e(x, z) = e(y, z);
 	}
 } 
  
-Class Setoid<T> : T (equ : EquivRel<T>) { }
+Class Setoid<T>[S] : ℙ(T) (equ : EquivRel<S>) { }
