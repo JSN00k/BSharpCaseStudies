@@ -5,7 +5,7 @@
 </org.eventb.theory.core.importTheoryProject>
 <org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="Monoid_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
-<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ M ↦ ident ∣ M ∈ SemiGroup_T(T) ∧ ident ∈ T ∧ (∀x·x ∈ T ⇒ ((SemiGroup_equ(T, M)(SemiGroup_op(T, M)(x ↦ ident) ↦ x)= TRUE)∧(SemiGroup_equ(T, M)(SemiGroup_op(T, M)(ident ↦ x) ↦ x)= TRUE)))}"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ M ↦ ident | M ∈ SemiGroup_T(T) ∧ ident ∈ T ∧ (∀x·x ∈ T ⇒ ((SemiGroup_equ(T, M)(SemiGroup_op(T, M)(x ↦ ident) ↦ x)= TRUE)∧(SemiGroup_equ(T, M)(SemiGroup_op(T, M)(ident ↦ x) ↦ x)= TRUE)))}"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.typeParameter name=")" org.eventb.core.identifier="T_EvB"/>
 <org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="Monoid_equ" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">

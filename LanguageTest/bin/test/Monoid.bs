@@ -16,7 +16,7 @@ Class Monoid[M] : SemiGroup (ident : M)
 Import pNat.pNat
 
 Extend Monoid (Pow) {
-	raiseToL(x : M, p : pNat) : M 
+	raiseToL(x : M, p : pNat) : M
 		match p {
 			| zero : ident
 			| suc(ps) : op(x, raiseToL(x, ps))

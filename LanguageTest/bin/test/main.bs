@@ -8,11 +8,7 @@ package test
  */
 
 Datatype Bool
-| ⊤
-| ⊥
+| True
+| False
 {
-	not(a:Bool) : Bool match a {
-		| ⊤ : ⊥
-		| ⊥ : ⊤ 
-	}
 }

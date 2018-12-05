@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="5f26619382240a9b34579a87cf73bd4a" org.eventb.theory.core.outdated="false">
+<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="5f26619382240a9b34579a87cf73bd4a" org.eventb.theory.core.outdated="true">
 <org.eventb.theory.core.useTheory name="Relations" org.eventb.core.scTarget="/test-gen/Relations.dtf|org.eventb.theory.core.deployedTheoryRoot#Relations"/>
 <org.eventb.theory.core.scTypeParameter name="T_EvB" org.eventb.core.source="/test-gen/RelProofRules.tuf|org.eventb.theory.core.theoryRoot#RelProofRules|org.eventb.theory.core.typeParameter#element4" org.eventb.core.type="ℙ(T_EvB)"/>
 <org.eventb.theory.core.scProofRulesBlock name="T_EvC" org.eventb.core.label="Sym" org.eventb.core.source="/test-gen/RelProofRules.tuf|org.eventb.theory.core.theoryRoot#RelProofRules|org.eventb.theory.core.proofRulesBlock#element1">

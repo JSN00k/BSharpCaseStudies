@@ -1,2 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<org.eventb.theory.core.scTheoryRoot/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.scTheoryRoot org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.theory.core.thy" org.eventb.core.source="/test-gen/Monoid.tuf">
+<org.eventb.theory.core.scImportTheoryProject name="'" org.eventb.core.source="/test-gen/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.importTheoryProject#'" org.eventb.theory.core.importTheoryProject="/test-gen">
+<org.eventb.theory.core.scImportTheory name="'" org.eventb.core.source="/test-gen/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.importTheoryProject#'|org.eventb.theory.core.importTheory#'" org.eventb.theory.core.importTheory="/test-gen/Monoid0.dtf|org.eventb.theory.core.deployedTheoryRoot#Monoid0"/>
+<org.eventb.theory.core.scImportTheory name="(" org.eventb.core.source="/test-gen/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.importTheoryProject#'|org.eventb.theory.core.importTheory#(" org.eventb.theory.core.importTheory="/test-gen/pNat0.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat0"/>
+</org.eventb.theory.core.scImportTheoryProject>
+<org.eventb.theory.core.scNewOperatorDefinition name="(" org.eventb.core.label="raiseToL" org.eventb.core.predicate="⊤" org.eventb.core.source="/test-gen/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#(" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.hasError="true" org.eventb.theory.core.notationType="PREFIX"/>
+<org.eventb.theory.core.scNewOperatorDefinition name=")" org.eventb.core.label="raiseToR" org.eventb.core.predicate="⊤" org.eventb.core.source="/test-gen/Monoid.tuf|org.eventb.theory.core.theoryRoot#Monoid|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.hasError="true" org.eventb.theory.core.notationType="PREFIX"/>
+</org.eventb.theory.core.scTheoryRoot>
