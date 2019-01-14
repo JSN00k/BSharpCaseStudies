@@ -1411,6 +1411,10 @@
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="Monoid_ident/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T_EvB">
 <org.eventb.core.lang name="L">
+<org.eventb.theory.core.scDatatypeDefinition name="Bool">
+<org.eventb.theory.core.scDatatypeConstructor name="True"/>
+<org.eventb.theory.core.scDatatypeConstructor name="False"/>
+</org.eventb.theory.core.scDatatypeDefinition>
 <org.eventb.theory.core.scNewOperatorDefinition name="ReflexRel_T" org.eventb.core.label="ReflexRel_T" org.eventb.core.predicate="⊤" org.eventb.core.source="/test-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.newOperatorDefinition#(" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(ℙ(T_EvB×T_EvB×BOOL))" org.eventb.theory.core.wd="∀r⦂ℙ(T_EvB×T_EvB×BOOL)·(r∈T × T → BOOL∧(∀x⦂T_EvB·¬x∈T∨(x ↦ x∈dom(r)∧r∈T_EvB × T_EvB ⇸ BOOL∧r(x ↦ x)=TRUE)))∨¬r∈T × T → BOOL∨(∃x⦂T_EvB·x∈T∧x ↦ x∈dom(r)∧r∈T_EvB × T_EvB ⇸ BOOL∧¬r(x ↦ x)=TRUE)">
 <org.eventb.theory.core.scOperatorArgument name="T" org.eventb.core.source="/test-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="ℙ(T_EvB)"/>
 <org.eventb.theory.core.scDirectOperatorDefinition name="(" org.eventb.core.source="/test-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.newOperatorDefinition#(|org.eventb.theory.core.directOperatorDefinition#(" org.eventb.theory.core.formula="{r⦂ℙ(T_EvB×T_EvB×BOOL)·r∈T × T → BOOL∧(∀x⦂T_EvB·x∈T⇒r(x ↦ x)=TRUE) ∣ r}"/>
@@ -1494,12 +1498,12 @@
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀T⦂ℙ(T_EvB),M⦂ℙ(T_EvB)×ℙ(T_EvB×T_EvB×BOOL)×ℙ(T_EvB×T_EvB×T_EvB)×T_EvB·T∈ℙ(T_EvB)∧M∈ℙ(T_EvB) × ℙ(T_EvB × T_EvB × BOOL) × ℙ(T_EvB × T_EvB × T_EvB) × T_EvB⇒(M∈Monoid_T(T)⇒M∈ℙ(T_EvB) × ℙ(T_EvB × T_EvB × BOOL) × ℙ(T_EvB × T_EvB × T_EvB) × T_EvB)"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀T⦂ℙ(T_EvB),M⦂ℙ(T_EvB)×ℙ(T_EvB×T_EvB×BOOL)×ℙ(T_EvB×T_EvB×T_EvB)×T_EvB·T∈ℙ(T_EvB)∧M∈ℙ(T_EvB) × ℙ(T_EvB × T_EvB × BOOL) × ℙ(T_EvB × T_EvB × T_EvB) × T_EvB⇒(M∈Monoid_T(T)⇒M∈dom(prj2 ⦂ ℙ(ℙ(T_EvB)×ℙ(T_EvB×T_EvB×BOOL)×ℙ(T_EvB×T_EvB×T_EvB)×T_EvB×T_EvB))∧(prj2 ⦂ ℙ(ℙ(T_EvB)×ℙ(T_EvB×T_EvB×BOOL)×ℙ(T_EvB×T_EvB×T_EvB)×T_EvB×T_EvB))∈ℙ(T_EvB) × ℙ(T_EvB × T_EvB × BOOL) × ℙ(T_EvB × T_EvB × T_EvB) × T_EvB ⇸ T_EvB)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀T⦂ℙ(T_EvB),M⦂ℙ(T_EvB)×ℙ(T_EvB×T_EvB×BOOL)×ℙ(T_EvB×T_EvB×T_EvB)×T_EvB·T∈ℙ(T_EvB)∧M∈ℙ(T_EvB) × ℙ(T_EvB × T_EvB × BOOL) × ℙ(T_EvB × T_EvB × T_EvB) × T_EvB⇒(M∈Monoid_T(T)⇒M∈ℙ(T_EvB) × ℙ(T_EvB × T_EvB × BOOL) × ℙ(T_EvB × T_EvB × T_EvB) × T_EvB)"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀T⦂ℙ(T_EvB),M⦂ℙ(T_EvB)×ℙ(T_EvB×T_EvB×BOOL)×ℙ(T_EvB×T_EvB×T_EvB)×T_EvB·⊤∧⊤⇒(M∈Monoid_T(T)⇒⊤)"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="ident:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="op,T,ident,equ,x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T_EvB" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L">

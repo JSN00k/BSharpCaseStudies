@@ -6,7 +6,7 @@
 <org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="baseOp_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T1_EvB)" org.eventb.core.identifier="T1"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Setoid_T(T1)" org.eventb.core.identifier="T"/>
-<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="{ bOp ∣ bOp ∈ T1 × T1 → T1 ∧ (∀x, y, z·x ∈ T1 ∧ y ∈ T1 ∧ z ∈ T1 ⇒ ((Setoid_equ(T1, T)(x ↦ y)= TRUE)⇒((Setoid_equ(T1, T)(bOp(x ↦ z) ↦ bOp(y ↦ z))= TRUE)∧(Setoid_equ(T1, T)(bOp(z ↦ x) ↦ bOp(z ↦ y))= TRUE))))}"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="{ bOp ∣ bOp ∈ T1 × T1 → T1 ∧ (∀x, y, z·x ∈ T1 ∧ y ∈ T1 ∧ z ∈ T1 ⇒ ((Setoid_equ(T1, T)(x ↦ y)= TRUE) ⇒ ((Setoid_equ(T1, T)(bOp(x ↦ z) ↦ bOp(y ↦ z))= TRUE) ∧ (Setoid_equ(T1, T)(bOp(z ↦ x) ↦ bOp(z ↦ y))= TRUE))))}"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.typeParameter name=")" org.eventb.core.identifier="T1_EvB"/>
 <org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="AssocOp_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">

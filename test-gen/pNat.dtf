@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="6fdd93c3166f183544099d8ddb581236" org.eventb.theory.core.outdated="false">
+<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="6fdd93c3166f183544099d8ddb581236" org.eventb.theory.core.outdated="true">
 <org.eventb.theory.core.useTheory name="pNat0" org.eventb.core.scTarget="/test-gen/pNat0.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat0"/>
 <org.eventb.theory.core.useTheory name="Monoid" org.eventb.core.scTarget="/test-gen/Monoid.dtf|org.eventb.theory.core.deployedTheoryRoot#Monoid"/>
 </org.eventb.theory.core.deployedTheoryRoot>
