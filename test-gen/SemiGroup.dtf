@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="b80d3bcd271be64c2a12d3216066c1fb" org.eventb.theory.core.outdated="false">
+<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="b80d3bcd271be64c2a12d3216066c1fb" org.eventb.theory.core.outdated="true">
 <org.eventb.theory.core.useTheory name="Relations" org.eventb.core.scTarget="/test-gen/Relations.dtf|org.eventb.theory.core.deployedTheoryRoot#Relations"/>
 <org.eventb.theory.core.useTheory name="Operators" org.eventb.core.scTarget="/test-gen/Operators.dtf|org.eventb.theory.core.deployedTheoryRoot#Operators"/>
 <org.eventb.theory.core.scTypeParameter name="T_EvB" org.eventb.core.source="/test-gen/SemiGroup.tuf|org.eventb.theory.core.theoryRoot#SemiGroup|org.eventb.theory.core.typeParameter#)" org.eventb.core.type="ℙ(T_EvB)"/>

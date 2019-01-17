@@ -25,6 +25,6 @@ Extend Monoid (Pow) {
 	raiseToR(x : M, p : pNat) : M
 		match p {
 			| zero : ident
-			| suc(ps) : op(raiseToR(x, ps), x)
+			| suc(ps) : op(raiseToR(x, ps), x) 
 		}
 }

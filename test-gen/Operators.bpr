@@ -280,13 +280,13 @@
 <org.eventb.core.prIdent name="y" org.eventb.core.type="T1_EvB"/>
 <org.eventb.core.prIdent name="z" org.eventb.core.type="T1_EvB"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
 <org.eventb.core.prReas name="r6" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="AssocOp_T/Op-WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="aOp,T,x,y,z,T1" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T1_EvB">
@@ -390,15 +390,15 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="aOp∈baseOp_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T),T)⇒(∀x⦂T1_EvB,y⦂T1_EvB,z⦂T1_EvB·x∈T1∧y∈T1∧z∈T1⇒T∈Setoid_T(T1)∧y ↦ z∈dom(aOp)∧aOp∈T1_EvB × T1_EvB ⇸ T1_EvB∧x ↦ aOp(y ↦ z)∈dom(aOp)∧x ↦ y∈dom(aOp)∧aOp(x ↦ y) ↦ z∈dom(aOp)∧aOp(x ↦ aOp(y ↦ z)) ↦ aOp(aOp(x ↦ y) ↦ z)∈dom(Setoid_equ(T1,T))∧Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL)">
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="aOp∈baseOp_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T),T)">
 <org.eventb.core.prIdent name="T" org.eventb.core.type="ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)"/>
-<org.eventb.core.prIdent name="T1" org.eventb.core.type="ℙ(T1_EvB)"/>
 <org.eventb.core.prIdent name="aOp" org.eventb.core.type="ℙ(T1_EvB×T1_EvB×T1_EvB)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="z∈T1">
 <org.eventb.core.prIdent name="T1" org.eventb.core.type="ℙ(T1_EvB)"/>
 <org.eventb.core.prIdent name="z" org.eventb.core.type="T1_EvB"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀T1⦂ℙ(T1_EvB),T⦂ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)·T1∈ℙ(T1_EvB)∧T∈ℙ(T1_EvB) × ℙ(T1_EvB × T1_EvB × BOOL)⇒(T∈Setoid_T(T1)⇒T∈ℙ(T1_EvB) × ℙ(T1_EvB × T1_EvB × BOOL)∧T∈Setoid_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T))∧(∀aOp⦂ℙ(T1_EvB×T1_EvB×T1_EvB)·aOp∈baseOp_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T),T)⇒(∀x⦂T1_EvB,y⦂T1_EvB,z⦂T1_EvB·x∈T1∧y∈T1∧z∈T1⇒T∈Setoid_T(T1)∧y ↦ z∈dom(aOp)∧aOp∈T1_EvB × T1_EvB ⇸ T1_EvB∧x ↦ aOp(y ↦ z)∈dom(aOp)∧x ↦ y∈dom(aOp)∧aOp(x ↦ y) ↦ z∈dom(aOp)∧aOp(x ↦ aOp(y ↦ z)) ↦ aOp(aOp(x ↦ y) ↦ z)∈dom(Setoid_equ(T1,T))∧Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL)))"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="T∈Setoid_T(T1)∧y ↦ z∈dom(aOp)∧aOp∈T1_EvB × T1_EvB ⇸ T1_EvB∧x ↦ aOp(y ↦ z)∈dom(aOp)∧x ↦ y∈dom(aOp)∧aOp(x ↦ y) ↦ z∈dom(aOp)∧aOp(x ↦ aOp(y ↦ z)) ↦ aOp(aOp(x ↦ y) ↦ z)∈dom(Setoid_equ(T1,T))∧Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL">
 <org.eventb.core.prIdent name="T" org.eventb.core.type="ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)"/>
 <org.eventb.core.prIdent name="T1" org.eventb.core.type="ℙ(T1_EvB)"/>
@@ -428,12 +428,12 @@
 <org.eventb.core.prIdent name="y" org.eventb.core.type="T1_EvB"/>
 <org.eventb.core.prIdent name="z" org.eventb.core.type="T1_EvB"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="T∈Setoid_T(T1)⇒T∈Setoid_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T))∧(∀aOp⦂ℙ(T1_EvB×T1_EvB×T1_EvB)·aOp∈baseOp_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T),T)⇒(∀x⦂T1_EvB,y⦂T1_EvB,z⦂T1_EvB·x∈T1∧y∈T1∧z∈T1⇒T∈Setoid_T(T1)∧y ↦ z∈dom(aOp)∧aOp∈T1_EvB × T1_EvB ⇸ T1_EvB∧x ↦ aOp(y ↦ z)∈dom(aOp)∧x ↦ y∈dom(aOp)∧aOp(x ↦ y) ↦ z∈dom(aOp)∧aOp(x ↦ aOp(y ↦ z)) ↦ aOp(aOp(x ↦ y) ↦ z)∈dom(Setoid_equ(T1,T))∧Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL))">
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL">
 <org.eventb.core.prIdent name="T" org.eventb.core.type="ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)"/>
 <org.eventb.core.prIdent name="T1" org.eventb.core.type="ℙ(T1_EvB)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀T1⦂ℙ(T1_EvB),T⦂ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)·T1∈ℙ(T1_EvB)∧T∈ℙ(T1_EvB) × ℙ(T1_EvB × T1_EvB × BOOL)⇒(T∈Setoid_T(T1)⇒(∀aOp⦂ℙ(T1_EvB×T1_EvB×T1_EvB)·T∈dom(prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))∧(prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))∈ℙ(T1_EvB) × ℙ(T1_EvB × T1_EvB × BOOL) ⇸ ℙ(T1_EvB)∧T∈Setoid_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T))∧(aOp∈baseOp_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T),T)⇒(∀x⦂T1_EvB,y⦂T1_EvB,z⦂T1_EvB·x∈T1∧y∈T1∧z∈T1⇒T∈Setoid_T(T1)∧y ↦ z∈dom(aOp)∧aOp∈T1_EvB × T1_EvB ⇸ T1_EvB∧x ↦ aOp(y ↦ z)∈dom(aOp)∧x ↦ y∈dom(aOp)∧aOp(x ↦ y) ↦ z∈dom(aOp)∧aOp(x ↦ aOp(y ↦ z)) ↦ aOp(aOp(x ↦ y) ↦ z)∈dom(Setoid_equ(T1,T))∧Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL))))"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL">
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀T1⦂ℙ(T1_EvB),T⦂ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)·T∈Setoid_T(T1)⇒T∈Setoid_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T))∧(∀aOp⦂ℙ(T1_EvB×T1_EvB×T1_EvB)·aOp∈baseOp_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T),T)⇒(∀x⦂T1_EvB,y⦂T1_EvB,z⦂T1_EvB·x∈T1∧y∈T1∧z∈T1⇒T∈Setoid_T(T1)∧y ↦ z∈dom(aOp)∧aOp∈T1_EvB × T1_EvB ⇸ T1_EvB∧x ↦ aOp(y ↦ z)∈dom(aOp)∧x ↦ y∈dom(aOp)∧aOp(x ↦ y) ↦ z∈dom(aOp)∧aOp(x ↦ aOp(y ↦ z)) ↦ aOp(aOp(x ↦ y) ↦ z)∈dom(Setoid_equ(T1,T))∧Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL))"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="T∈Setoid_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T))∧(∀aOp⦂ℙ(T1_EvB×T1_EvB×T1_EvB)·aOp∈baseOp_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T),T)⇒(∀x⦂T1_EvB,y⦂T1_EvB,z⦂T1_EvB·x∈T1∧y∈T1∧z∈T1⇒T∈Setoid_T(T1)∧y ↦ z∈dom(aOp)∧aOp∈T1_EvB × T1_EvB ⇸ T1_EvB∧x ↦ aOp(y ↦ z)∈dom(aOp)∧x ↦ y∈dom(aOp)∧aOp(x ↦ y) ↦ z∈dom(aOp)∧aOp(x ↦ aOp(y ↦ z)) ↦ aOp(aOp(x ↦ y) ↦ z)∈dom(Setoid_equ(T1,T))∧Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL))">
 <org.eventb.core.prIdent name="T" org.eventb.core.type="ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)"/>
 <org.eventb.core.prIdent name="T1" org.eventb.core.type="ℙ(T1_EvB)"/>
 </org.eventb.core.prPred>
@@ -442,6 +442,10 @@
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T1_EvB"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="T1_EvB"/>
 <org.eventb.core.prIdent name="z" org.eventb.core.type="T1_EvB"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="T∈Setoid_T(T1)⇒T∈Setoid_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T))∧(∀aOp⦂ℙ(T1_EvB×T1_EvB×T1_EvB)·aOp∈baseOp_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T),T)⇒(∀x⦂T1_EvB,y⦂T1_EvB,z⦂T1_EvB·x∈T1∧y∈T1∧z∈T1⇒T∈Setoid_T(T1)∧y ↦ z∈dom(aOp)∧aOp∈T1_EvB × T1_EvB ⇸ T1_EvB∧x ↦ aOp(y ↦ z)∈dom(aOp)∧x ↦ y∈dom(aOp)∧aOp(x ↦ y) ↦ z∈dom(aOp)∧aOp(x ↦ aOp(y ↦ z)) ↦ aOp(aOp(x ↦ y) ↦ z)∈dom(Setoid_equ(T1,T))∧Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL))">
+<org.eventb.core.prIdent name="T" org.eventb.core.type="ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)"/>
+<org.eventb.core.prIdent name="T1" org.eventb.core.type="ℙ(T1_EvB)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p12" org.eventb.core.predicate="x∈T1∧y∈T1∧z∈T1⇒T∈Setoid_T(T1)∧y ↦ z∈dom(aOp)∧aOp∈T1_EvB × T1_EvB ⇸ T1_EvB∧x ↦ aOp(y ↦ z)∈dom(aOp)∧x ↦ y∈dom(aOp)∧aOp(x ↦ y) ↦ z∈dom(aOp)∧aOp(x ↦ aOp(y ↦ z)) ↦ aOp(aOp(x ↦ y) ↦ z)∈dom(Setoid_equ(T1,T))∧Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL">
 <org.eventb.core.prIdent name="T" org.eventb.core.type="ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)"/>
@@ -460,11 +464,8 @@
 <org.eventb.core.prPred name="p18" org.eventb.core.predicate="aOp∈T1_EvB × T1_EvB ⇸ T1_EvB">
 <org.eventb.core.prIdent name="aOp" org.eventb.core.type="ℙ(T1_EvB×T1_EvB×T1_EvB)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="aOp∈baseOp_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T),T)">
-<org.eventb.core.prIdent name="T" org.eventb.core.type="ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)"/>
-<org.eventb.core.prIdent name="aOp" org.eventb.core.type="ℙ(T1_EvB×T1_EvB×T1_EvB)"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀T1⦂ℙ(T1_EvB),T⦂ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)·⊤∧⊤⇒(T∈Setoid_T(T1)⇒⊤∧T∈Setoid_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T))∧(∀aOp⦂ℙ(T1_EvB×T1_EvB×T1_EvB)·aOp∈baseOp_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T),T)⇒(∀x⦂T1_EvB,y⦂T1_EvB,z⦂T1_EvB·x∈T1∧y∈T1∧z∈T1⇒T∈Setoid_T(T1)∧y ↦ z∈dom(aOp)∧aOp∈T1_EvB × T1_EvB ⇸ T1_EvB∧x ↦ aOp(y ↦ z)∈dom(aOp)∧x ↦ y∈dom(aOp)∧aOp(x ↦ y) ↦ z∈dom(aOp)∧aOp(x ↦ aOp(y ↦ z)) ↦ aOp(aOp(x ↦ y) ↦ z)∈dom(Setoid_equ(T1,T))∧Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL)))"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀T1⦂ℙ(T1_EvB),T⦂ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)·T1∈ℙ(T1_EvB)∧T∈ℙ(T1_EvB) × ℙ(T1_EvB × T1_EvB × BOOL)⇒(T∈Setoid_T(T1)⇒(∀aOp⦂ℙ(T1_EvB×T1_EvB×T1_EvB)·T∈dom(prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))∧(prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))∈ℙ(T1_EvB) × ℙ(T1_EvB × T1_EvB × BOOL) ⇸ ℙ(T1_EvB)∧T∈Setoid_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T))∧(aOp∈baseOp_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T),T)⇒(∀x⦂T1_EvB,y⦂T1_EvB,z⦂T1_EvB·x∈T1∧y∈T1∧z∈T1⇒T∈Setoid_T(T1)∧y ↦ z∈dom(aOp)∧aOp∈T1_EvB × T1_EvB ⇸ T1_EvB∧x ↦ aOp(y ↦ z)∈dom(aOp)∧x ↦ y∈dom(aOp)∧aOp(x ↦ y) ↦ z∈dom(aOp)∧aOp(x ↦ aOp(y ↦ z)) ↦ aOp(aOp(x ↦ y) ↦ z)∈dom(Setoid_equ(T1,T))∧Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL))))"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="y∈T1">
 <org.eventb.core.prIdent name="T1" org.eventb.core.type="ℙ(T1_EvB)"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="T1_EvB"/>
@@ -477,12 +478,6 @@
 <org.eventb.core.prIdent name="y" org.eventb.core.type="T1_EvB"/>
 <org.eventb.core.prIdent name="z" org.eventb.core.type="T1_EvB"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀T1⦂ℙ(T1_EvB),T⦂ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)·T∈Setoid_T(T1)⇒T∈Setoid_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T))∧(∀aOp⦂ℙ(T1_EvB×T1_EvB×T1_EvB)·aOp∈baseOp_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T),T)⇒(∀x⦂T1_EvB,y⦂T1_EvB,z⦂T1_EvB·x∈T1∧y∈T1∧z∈T1⇒T∈Setoid_T(T1)∧y ↦ z∈dom(aOp)∧aOp∈T1_EvB × T1_EvB ⇸ T1_EvB∧x ↦ aOp(y ↦ z)∈dom(aOp)∧x ↦ y∈dom(aOp)∧aOp(x ↦ y) ↦ z∈dom(aOp)∧aOp(x ↦ aOp(y ↦ z)) ↦ aOp(aOp(x ↦ y) ↦ z)∈dom(Setoid_equ(T1,T))∧Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL))"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀T1⦂ℙ(T1_EvB),T⦂ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)·T1∈ℙ(T1_EvB)∧T∈ℙ(T1_EvB) × ℙ(T1_EvB × T1_EvB × BOOL)⇒(T∈Setoid_T(T1)⇒T∈ℙ(T1_EvB) × ℙ(T1_EvB × T1_EvB × BOOL)∧T∈Setoid_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T))∧(∀aOp⦂ℙ(T1_EvB×T1_EvB×T1_EvB)·aOp∈baseOp_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T),T)⇒(∀x⦂T1_EvB,y⦂T1_EvB,z⦂T1_EvB·x∈T1∧y∈T1∧z∈T1⇒T∈Setoid_T(T1)∧y ↦ z∈dom(aOp)∧aOp∈T1_EvB × T1_EvB ⇸ T1_EvB∧x ↦ aOp(y ↦ z)∈dom(aOp)∧x ↦ y∈dom(aOp)∧aOp(x ↦ y) ↦ z∈dom(aOp)∧aOp(x ↦ aOp(y ↦ z)) ↦ aOp(aOp(x ↦ y) ↦ z)∈dom(Setoid_equ(T1,T))∧Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL)))"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="T∈Setoid_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T))∧(∀aOp⦂ℙ(T1_EvB×T1_EvB×T1_EvB)·aOp∈baseOp_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T),T)⇒(∀x⦂T1_EvB,y⦂T1_EvB,z⦂T1_EvB·x∈T1∧y∈T1∧z∈T1⇒T∈Setoid_T(T1)∧y ↦ z∈dom(aOp)∧aOp∈T1_EvB × T1_EvB ⇸ T1_EvB∧x ↦ aOp(y ↦ z)∈dom(aOp)∧x ↦ y∈dom(aOp)∧aOp(x ↦ y) ↦ z∈dom(aOp)∧aOp(x ↦ aOp(y ↦ z)) ↦ aOp(aOp(x ↦ y) ↦ z)∈dom(Setoid_equ(T1,T))∧Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL))">
-<org.eventb.core.prIdent name="T" org.eventb.core.type="ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)"/>
-<org.eventb.core.prIdent name="T1" org.eventb.core.type="ℙ(T1_EvB)"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="∀aOp⦂ℙ(T1_EvB×T1_EvB×T1_EvB)·aOp∈baseOp_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T),T)⇒(∀x⦂T1_EvB,y⦂T1_EvB,z⦂T1_EvB·x∈T1∧y∈T1∧z∈T1⇒T∈Setoid_T(T1)∧y ↦ z∈dom(aOp)∧aOp∈T1_EvB × T1_EvB ⇸ T1_EvB∧x ↦ aOp(y ↦ z)∈dom(aOp)∧x ↦ y∈dom(aOp)∧aOp(x ↦ y) ↦ z∈dom(aOp)∧aOp(x ↦ aOp(y ↦ z)) ↦ aOp(aOp(x ↦ y) ↦ z)∈dom(Setoid_equ(T1,T))∧Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL)">
 <org.eventb.core.prIdent name="T" org.eventb.core.type="ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)"/>
 <org.eventb.core.prIdent name="T1" org.eventb.core.type="ℙ(T1_EvB)"/>
@@ -492,11 +487,16 @@
 <org.eventb.core.prIdent name="x" org.eventb.core.type="T1_EvB"/>
 <org.eventb.core.prIdent name="y" org.eventb.core.type="T1_EvB"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="aOp∈baseOp_T((prj1 ⦂ ℙ(ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)×ℙ(T1_EvB)))(T),T)⇒(∀x⦂T1_EvB,y⦂T1_EvB,z⦂T1_EvB·x∈T1∧y∈T1∧z∈T1⇒T∈Setoid_T(T1)∧y ↦ z∈dom(aOp)∧aOp∈T1_EvB × T1_EvB ⇸ T1_EvB∧x ↦ aOp(y ↦ z)∈dom(aOp)∧x ↦ y∈dom(aOp)∧aOp(x ↦ y) ↦ z∈dom(aOp)∧aOp(x ↦ aOp(y ↦ z)) ↦ aOp(aOp(x ↦ y) ↦ z)∈dom(Setoid_equ(T1,T))∧Setoid_equ(T1,T)∈T1_EvB × T1_EvB ⇸ BOOL)">
+<org.eventb.core.prIdent name="T" org.eventb.core.type="ℙ(T1_EvB)×ℙ(T1_EvB×T1_EvB×BOOL)"/>
+<org.eventb.core.prIdent name="T1" org.eventb.core.type="ℙ(T1_EvB)"/>
+<org.eventb.core.prIdent name="aOp" org.eventb.core.type="ℙ(T1_EvB×T1_EvB×T1_EvB)"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>

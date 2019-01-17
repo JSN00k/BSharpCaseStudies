@@ -23,4 +23,4 @@ Class EquivRel<T>[e] : ReflexRel<T>, SymetricRel<T>, TransRel<T> {
 	}
 }
  
-Class Setoid<T>[S] : ℙ(T) (equ : EquivRel<S>) { }
+Class Setoid<T>[S] : ℙ(T) (equ : EquivRel<S>) { } 

@@ -1497,13 +1497,13 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀T⦂ℙ(T_EvB),M⦂ℙ(T_EvB)×ℙ(T_EvB×T_EvB×BOOL)×ℙ(T_EvB×T_EvB×T_EvB)×T_EvB·T∈ℙ(T_EvB)∧M∈ℙ(T_EvB) × ℙ(T_EvB × T_EvB × BOOL) × ℙ(T_EvB × T_EvB × T_EvB) × T_EvB⇒(M∈Monoid_T(T)⇒M∈dom(prj2 ⦂ ℙ(ℙ(T_EvB)×ℙ(T_EvB×T_EvB×BOOL)×ℙ(T_EvB×T_EvB×T_EvB)×T_EvB×T_EvB))∧(prj2 ⦂ ℙ(ℙ(T_EvB)×ℙ(T_EvB×T_EvB×BOOL)×ℙ(T_EvB×T_EvB×T_EvB)×T_EvB×T_EvB))∈ℙ(T_EvB) × ℙ(T_EvB × T_EvB × BOOL) × ℙ(T_EvB × T_EvB × T_EvB) × T_EvB ⇸ T_EvB)"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀T⦂ℙ(T_EvB),M⦂ℙ(T_EvB)×ℙ(T_EvB×T_EvB×BOOL)×ℙ(T_EvB×T_EvB×T_EvB)×T_EvB·T∈ℙ(T_EvB)∧M∈ℙ(T_EvB) × ℙ(T_EvB × T_EvB × BOOL) × ℙ(T_EvB × T_EvB × T_EvB) × T_EvB⇒(M∈Monoid_T(T)⇒M∈ℙ(T_EvB) × ℙ(T_EvB × T_EvB × BOOL) × ℙ(T_EvB × T_EvB × T_EvB) × T_EvB)"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀T⦂ℙ(T_EvB),M⦂ℙ(T_EvB)×ℙ(T_EvB×T_EvB×BOOL)×ℙ(T_EvB×T_EvB×T_EvB)×T_EvB·⊤∧⊤⇒(M∈Monoid_T(T)⇒⊤)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀T⦂ℙ(T_EvB),M⦂ℙ(T_EvB)×ℙ(T_EvB×T_EvB×BOOL)×ℙ(T_EvB×T_EvB×T_EvB)×T_EvB·T∈ℙ(T_EvB)∧M∈ℙ(T_EvB) × ℙ(T_EvB × T_EvB × BOOL) × ℙ(T_EvB × T_EvB × T_EvB) × T_EvB⇒(M∈Monoid_T(T)⇒M∈ℙ(T_EvB) × ℙ(T_EvB × T_EvB × BOOL) × ℙ(T_EvB × T_EvB × T_EvB) × T_EvB)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀T⦂ℙ(T_EvB),M⦂ℙ(T_EvB)×ℙ(T_EvB×T_EvB×BOOL)×ℙ(T_EvB×T_EvB×T_EvB)×T_EvB·T∈ℙ(T_EvB)∧M∈ℙ(T_EvB) × ℙ(T_EvB × T_EvB × BOOL) × ℙ(T_EvB × T_EvB × T_EvB) × T_EvB⇒(M∈Monoid_T(T)⇒M∈dom(prj2 ⦂ ℙ(ℙ(T_EvB)×ℙ(T_EvB×T_EvB×BOOL)×ℙ(T_EvB×T_EvB×T_EvB)×T_EvB×T_EvB))∧(prj2 ⦂ ℙ(ℙ(T_EvB)×ℙ(T_EvB×T_EvB×BOOL)×ℙ(T_EvB×T_EvB×T_EvB)×T_EvB×T_EvB))∈ℙ(T_EvB) × ℙ(T_EvB × T_EvB × BOOL) × ℙ(T_EvB × T_EvB × T_EvB) × T_EvB ⇸ T_EvB)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="ident:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="op,T,ident,equ,x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T_EvB" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L">
