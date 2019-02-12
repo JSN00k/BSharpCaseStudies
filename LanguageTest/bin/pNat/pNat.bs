@@ -1,0 +1,24 @@
+package pNat
+
+From Relations Import Relations.*
+
+Datatype pNat
+| zero
+| suc(prev : pNat) {
+	add(x, y : pNat) : pNat INFIX 100
+		match x {
+			| zero : y
+			| suc(xs) : suc(xs add y)
+		}
+	
+	Instance Setoid<pNat>([=])
+}
+
+From Monoids Import Monoid.*
+CommMonoid.*
+
+Extend pNat (mon_Add) {
+	Instance CommMonoid<pNat>(add, zero) addMon (times = raiseToL)
+	
+	Instance CommMonoid<pNat>(times, suc(zero)) timesMon (power = raiseToL) 
+}

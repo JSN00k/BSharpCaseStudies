@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.deployedTheoryRoot org.eventb.core.accurate="true" org.eventb.core.comment="GENERATED THEORY FILE: !DO NOT CHANGE!" org.eventb.theory.core.modificationHashValue="36d527d07583fa195282789f321657ab" org.eventb.theory.core.outdated="false">
+<org.eventb.theory.core.scDatatypeDefinition name="Bool" org.eventb.core.source="/main-gen/main.tuf|org.eventb.theory.core.theoryRoot#main|org.eventb.theory.core.datatypeDefinition#'" org.eventb.theory.core.hasError="false">
+<org.eventb.theory.core.scDatatypeConstructor name="True" org.eventb.core.source="/main-gen/main.tuf|org.eventb.theory.core.theoryRoot#main|org.eventb.theory.core.datatypeDefinition#'|org.eventb.theory.core.datatypeConstructor#'"/>
+<org.eventb.theory.core.scDatatypeConstructor name="False" org.eventb.core.source="/main-gen/main.tuf|org.eventb.theory.core.theoryRoot#main|org.eventb.theory.core.datatypeDefinition#'|org.eventb.theory.core.datatypeConstructor#("/>
+</org.eventb.theory.core.scDatatypeDefinition>
+</org.eventb.theory.core.deployedTheoryRoot>

@@ -1,0 +1,26 @@
+package Relations
+
+From main Import main.*
+ 
+Class ReflexRel<T>[r] : T × T → Bool where ∀ x : T · r(x, x) { }
+
+Class SymetricRel<T>[s] : T × T → Bool where ∀ x : T, y : T · s(x, y) ⇒ s(y, x) {
+	Theorems {
+		sym iff:
+			∀ x, y : T · s(x, y) ⇔ s(y, x);
+	}
+}
+
+Class TransRel<T>[t] : T × T → Bool where ∀ x, y, z : T · t(x, y) ∧ t(y, z) ⇒ t(x, z) {
+} 
+
+Class EquivRel<T>[e] : ReflexRel<T>, SymetricRel<T>, TransRel<T> { 
+	Theorems {
+		TransInverse:
+			∀ x, y, z : T  · e(x, y) ∧ ¬ e(y, z) ⇒ ¬ e(x, z);
+		TransRewrite:
+			∀ x, y, z : T · e(x, y) ⇒ e(x, z) = e(y, z);
+	}
+} 
+
+Class Setoid<T>[S] : ℙ(T) (equ : EquivRel<S>) { }

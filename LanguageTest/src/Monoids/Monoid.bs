@@ -1,0 +1,30 @@
+package Monoids
+
+Import SemiGroup.*
+
+Class Monoid[M] : SemiGroup (ident : M) 
+  where ∀ x : M · equ(op(x, ident), x) ∧ equ(op(ident, x), x) {
+	Theorems {
+		ident:
+			∀ x : M · equ(op(x, ident), ident) ⇔ equ(x,  ident);
+			
+		unique ident:
+			∀ oIdent : M · (∀ r : M · equ(op(oIdent, r), r)) ∨ (∀ l : M · equ(op(l, oIdent), l)) ⇔ equ(oIdent, ident);
+	}
+}
+ 
+From pNat Import pNat.pNat
+
+Extend Monoid (Pow) {
+	raiseToL(x : M, p : pNat) : M
+		match p {
+			| zero : ident
+			| suc(ps) : op(x, raiseToL(x, ps))
+		}
+		
+	raiseToR(x : M, p : pNat) : M
+		match p {
+			| zero : ident
+			| suc(ps) : op(raiseToR(x, ps), x) 
+		}
+}

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
-<org.eventb.theory.core.datatypeDefinition name="'" org.eventb.core.identifier="Bool">
-<org.eventb.theory.core.datatypeConstructor name="'" org.eventb.core.identifier="True"/>
-<org.eventb.theory.core.datatypeConstructor name="(" org.eventb.core.identifier="False"/>
-</org.eventb.theory.core.datatypeDefinition>
-</org.eventb.theory.core.theoryRoot>

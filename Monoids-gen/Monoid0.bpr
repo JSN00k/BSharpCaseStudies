@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="Monoid_T/Op-WD"/>
+<org.eventb.core.prProof name="Monoid_equ/Op-WD"/>
+<org.eventb.core.prProof name="Monoid_op/Op-WD"/>
+<org.eventb.core.prProof name="Monoid_ident/Op-WD"/>
+<org.eventb.core.prProof name="ident:/S-THM"/>
+<org.eventb.core.prProof name="ident:/WD-THM"/>
+<org.eventb.core.prProof name="unique ident:/S-THM"/>
+<org.eventb.core.prProof name="unique ident:/WD-THM"/>
+</org.eventb.core.prFile>

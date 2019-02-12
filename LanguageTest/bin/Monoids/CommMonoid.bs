@@ -1,0 +1,14 @@
+package Monoids
+
+Import Monoid.*
+
+From pNat Import pNat.pNat
+From Operators Import Operators.*
+
+Class CommMonoid[M] : Monoid where (∀ x, y : M · equ(op(x, y), op(y, x))) {
+	Theorems {
+		LeftPow equals RightPow:
+			∀ x : M, p : pNat ·  equ(raiseToL(x, p), raiseToR(x, p));
+
+	}
+}

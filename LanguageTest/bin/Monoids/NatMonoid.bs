@@ -1,0 +1,14 @@
+package Monoids
+
+Import CommMonoid.*
+Monoid.*
+
+From pNat Import pNat.*
+From Operators Import Operators.*
+
+Class pNatCommMon[M] : CommMonoid<pNat> {
+	Theorems {
+		LeftPow is Associative:
+			raiseToL ∈ AssocOp<M>;
+	}
+}

@@ -1,7 +1,0 @@
-package test
-
-Import Relations.Setoid
- 
- Class baseOp<T:Setoid>[bOp] : T × T → T where ∀ x, y, z : T · T.equ(x, y) ⇒ T.equ(bOp(x, z), bOp(y, z)) ∧ T.equ(bOp(z, x), bOp(z, y)) { }
- 
-Class AssocOp<T:Setoid>[aOp] : baseOp<T> where ∀ x, y, z : T · T.equ(aOp(x, aOp(y, z)),  aOp(aOp(x, y), z)) { } 

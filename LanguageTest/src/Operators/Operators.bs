@@ -1,0 +1,11 @@
+package Operators
+
+From Relations Import Relations.Setoid
+ 
+ Class baseOp<T:Setoid>[bOp] : T × T → T where ∀ x, y, z : T · T.equ(x, y) ⇒ T.equ(bOp(x, z), bOp(y, z)) ∧ T.equ(bOp(z, x), bOp(z, y)) { }
+ 
+Class AssocOp<T:Setoid>[aOp] : baseOp<T> where ∀ x, y, z : T · T.equ(aOp(x, aOp(y, z)),  aOp(aOp(x, y), z)) { }
+
+Class CommOp<T:Setoid>[cOp] : baseOp<T> where ∀ x, y : T · T.equ(cOp(x, y), cOp(y, x)) { }
+
+Class AssocCommOp<T:Setoid>[Op] : AssocOp<T>, CommOp<T> { }
