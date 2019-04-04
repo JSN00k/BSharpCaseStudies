@@ -11,18 +11,18 @@
 <org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="Monoid_equ" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Monoid_T(T)" org.eventb.core.identifier="M"/>
-<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="SemiGroup_equ(T, prj1(M))"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj2(prj1(prj1(M)))"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="Monoid_op" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Monoid_T(T)" org.eventb.core.identifier="M"/>
-<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="SemiGroup_op(T, prj1(M))"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj2(prj1(M))"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="," org.eventb.core.label="Monoid_ident" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Monoid_T(T)" org.eventb.core.identifier="M"/>
 <org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj2(M)"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.theorem name="-" org.eventb.core.label="ident:" org.eventb.core.predicate="∀T, equ, op, ident, x·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ Monoid_T(T) ∧ x ∈ T ⇒ ((equ(op(x ↦ ident) ↦ ident) = TRUE) ⇔ (equ(x ↦ ident) = TRUE))"/>
-<org.eventb.theory.core.theorem name="." org.eventb.core.label="unique ident:" org.eventb.core.predicate="∀T, equ, op, ident, oIdent·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ Monoid_T(T) ∧ oIdent ∈ T ⇒ (((∀r·r ∈ T ⇒ equ(op(oIdent ↦ r) ↦ r) = TRUE) ∨ (∀l·l ∈ T ⇒ equ(op(l ↦ oIdent) ↦ l) = TRUE)) ⇔ (equ(oIdent ↦ ident) = TRUE))"/>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="ident:" org.eventb.core.predicate="∀T, equ, op, ident·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ Monoid_T(T) ⇒ (∀x·x ∈ T ⇒ ((equ(op(x ↦ ident) ↦ ident) = TRUE) ⇔ (equ(x ↦ ident) = TRUE)))"/>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="unique ident:" org.eventb.core.predicate="∀T, equ, op, ident·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ Monoid_T(T) ⇒ (∀oIdent·oIdent ∈ T ⇒ (((∀r·r ∈ T ⇒ equ(op(oIdent ↦ r) ↦ r) = TRUE) ∨ (∀l·l ∈ T ⇒ equ(op(l ↦ oIdent) ↦ l) = TRUE)) ⇔ (equ(oIdent ↦ ident) = TRUE)))"/>
 </org.eventb.theory.core.theoryRoot>

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="baseOp_T/Op-WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="baseOp_T/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="1" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="AssocOp_T/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="1" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="CommOp_T/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="1" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="AssocCommOp_T/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="1" org.eventb.core.psManual="true"/>
 </org.eventb.core.psFile>

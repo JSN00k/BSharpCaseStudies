@@ -21,6 +21,6 @@ Class EquivRel<T>[e] : ReflexRel<T>, SymetricRel<T>, TransRel<T> {
 		TransRewrite:
 			∀ x, y, z : T · e(x, y) ⇒ e(x, z) = e(y, z);
 	}
-} 
+}
 
-Class Setoid<T>[S] : ℙ(T) (equ : EquivRel<S>) { }
+Class Setoid<T>[S] : ℙ(T) (equ : EquivRel<S>) { } 

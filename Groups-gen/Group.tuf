@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/Monoids-gen">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Monoids-gen/Monoid.dtf|org.eventb.theory.core.deployedTheoryRoot#Monoid"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="Group_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ G | G ∈ Monoid_T(T) ∧ (∀x·x ∈ T ⇒ (∃y·y ∈ T ∧ ((Monoid_equ(T, G)(Monoid_op(T, G)(x ↦ y) ↦ Monoid_ident(T, G)) = TRUE) ∧ (Monoid_equ(T, G)(Monoid_op(T, G)(y ↦ x) ↦ Monoid_ident(T, G)) = TRUE))))}"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.typeParameter name=")" org.eventb.core.identifier="T_EvB"/>
+<org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="Group_equ" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Group_T(T)" org.eventb.core.identifier="G"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="Monoid_equ(T, G)"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="Group_op" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Group_T(T)" org.eventb.core.identifier="G"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="Monoid_op(T, G)"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="," org.eventb.core.label="Group_ident" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Group_T(T)" org.eventb.core.identifier="G"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="Monoid_ident(T, G)"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="Inv unique:" org.eventb.core.predicate="∀T, equ, op, ident, a, b, c·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ Group_T(T) ∧ a ∈ T ∧ b ∈ T ∧ c ∈ T ⇒ ((equ(op(a ↦ b) ↦ ident) = TRUE) ⇒ (equ(op(b ↦ a) ↦ ident) = TRUE))"/>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="Op Inverse:" org.eventb.core.predicate="∀T, equ, op, ident, a, b, x, y·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ Group_T(T) ∧ a ∈ T ∧ b ∈ T ∧ x ∈ T ∧ y ∈ T ⇒ (((equ(op(a ↦ x) ↦ ident) = TRUE) ∧ (equ(op(b ↦ y) ↦ ident) = TRUE)) ⇔ (equ(op(op(a ↦ b) ↦ op(y ↦ x)) ↦ ident) = TRUE))"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="Cancellation Law:" org.eventb.core.predicate="∀T, equ, op, ident, a, b, c·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ Group_T(T) ∧ a ∈ T ∧ b ∈ T ∧ c ∈ T ⇒ ((equ(op(a ↦ c) ↦ op(b ↦ c)) = TRUE) ⇔ (equ(a ↦ b) = TRUE))"/>
+<org.eventb.theory.core.theorem name="0" org.eventb.core.label="a squared equ a implies a equ ident:" org.eventb.core.predicate="∀T, equ, op, ident, a·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ Group_T(T) ∧ a ∈ T ⇒ ((equ(op(a ↦ a) ↦ a) = TRUE) ⇒ (equ(a ↦ ident) = TRUE))"/>
+<org.eventb.theory.core.theorem name="1" org.eventb.core.label="Inverse Func:" org.eventb.core.predicate="∀T, equ, op, ident·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ Group_T(T) ⇒ (∃inv·inv ∈ T → T ∧ (∀x·x ∈ T ⇒ equ(op(inv(x) ↦ x) ↦ ident) = TRUE))"/>
+</org.eventb.theory.core.theoryRoot>

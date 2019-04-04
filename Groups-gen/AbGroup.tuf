@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/Groups-gen">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Groups-gen/Group.dtf|org.eventb.theory.core.deployedTheoryRoot#Group"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.importTheoryProject name="(" org.eventb.theory.core.importTheoryProject="/Monoids-gen">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Monoids-gen/CommMonoid.dtf|org.eventb.theory.core.deployedTheoryRoot#CommMonoid"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="AbGroup_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ AG | AG ∈ Group_T(T) ∩ CommMonoid_T(T)}"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.typeParameter name="*" org.eventb.core.identifier="T_EvB"/>
+</org.eventb.theory.core.theoryRoot>

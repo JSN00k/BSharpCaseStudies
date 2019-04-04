@@ -12,6 +12,11 @@ Datatype pNat
 		}
 	
 	Instance Setoid<pNat>([=])
+	
+	Theorems {
+		suc out of addition:
+		  ∀ x, y : pNat · x add suc(y) = suc(x add y);
+	}
 }
 
 From Monoids Import Monoid.*
@@ -21,4 +26,4 @@ Extend pNat (mon_Add) {
 	Instance CommMonoid<pNat>(add, zero) addMon (times = raiseToL)
 	
 	Instance CommMonoid<pNat>(times, suc(zero)) timesMon (power = raiseToL) 
-}
+} 

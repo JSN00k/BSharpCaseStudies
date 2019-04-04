@@ -17,10 +17,10 @@ From pNat Import pNat.pNat
 
 Extend Monoid (Pow) {
 	raiseToL(x : M, p : pNat) : M
-		match p {
+		match p { 
 			| zero : ident
 			| suc(ps) : op(x, raiseToL(x, ps))
-		}
+		} 
 		
 	raiseToR(x : M, p : pNat) : M
 		match p {
