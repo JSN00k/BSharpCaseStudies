@@ -27,4 +27,12 @@ Extend Monoid (Pow) {
 			| zero : ident
 			| suc(ps) : op(raiseToR(x, ps), x) 
 		}
+		
+	Theorems {
+		RaiseToL Equiv Preservation:
+		  ∀ x , y: M, p : pNat · equ(x, y) ⇒ equ(raiseToL(x, p), raiseToL(y, p));
+		  
+		RaiseToR Equiv Preservation:
+		  ∀ x , y: M, p : pNat · equ(x, y) ⇒ equ(raiseToR(x, p), raiseToR(y, p));
+	} 
 }

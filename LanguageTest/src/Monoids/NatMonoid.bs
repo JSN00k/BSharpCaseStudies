@@ -7,8 +7,8 @@ From pNat Import pNat.*
 From Operators Import Operators.*
 
 Class pNatCommMon[M] : CommMonoid<pNat> {
-	Theorems {
-		LeftPow is Associative:
-			raiseToL ∈ AssocOp<M>;
-	}
+	// I can't prove the theorem I thought I could because it requires the equivalence relation to be equality.
+	// I think that maybe this should be inferred from the pNat type as the default equivalence relation, but it
+	// currently is not. I'm not sure how much work this would involve. I could certainly encode this easily with a 
+	// where statement instead.
 }

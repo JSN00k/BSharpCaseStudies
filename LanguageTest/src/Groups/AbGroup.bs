@@ -6,4 +6,4 @@ From Monoids Import CommMonoid
 
 Class AbGroup[AG] : Group, CommMonoid {
 	
-}
+} 

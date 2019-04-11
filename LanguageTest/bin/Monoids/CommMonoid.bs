@@ -11,4 +11,4 @@ Class CommMonoid[M] : Monoid where (∀ x, y : M · equ(op(x, y), op(y, x))) {
 			∀ x : M, p : pNat ·  equ(raiseToL(x, p), raiseToR(x, p));
 
 	}
-}
+} 

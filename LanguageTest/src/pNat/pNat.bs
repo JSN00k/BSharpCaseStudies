@@ -26,4 +26,4 @@ Extend pNat (mon_Add) {
 	Instance CommMonoid<pNat>(add, zero) addMon (times = raiseToL)
 	
 	Instance CommMonoid<pNat>(times, suc(zero)) timesMon (power = raiseToL) 
-} 
+}
