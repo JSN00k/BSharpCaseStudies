@@ -11,6 +11,8 @@ Datatype pNat
 			| suc(xs) : suc(xs add y)
 		}
 	
+	add2(x : pNat) : pNat suc(suc(x))
+	
 	Instance Setoid<pNat>([=])
 	
 	Theorems {
