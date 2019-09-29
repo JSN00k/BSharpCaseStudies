@@ -34,5 +34,8 @@ Extend Monoid (Pow) {
 		  
 		RaiseToR Equiv Preservation:
 		  ∀ x , y: M, p : pNat · equ(x, y) ⇒ equ(raiseToR(x, p), raiseToR(y, p));
+		  
+		RaiseToL addRule:
+		  ∀ x : M, p, q :pNat · equ(op(raiseToL(x, p), raiseToL(x, q)), raiseToL(x, p add q)); 
 	} 
 }

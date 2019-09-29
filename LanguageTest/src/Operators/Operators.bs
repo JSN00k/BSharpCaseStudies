@@ -5,7 +5,13 @@ From Relations Import Relations.Setoid
  Class baseOp<T:Setoid>[bOp] : T × T → T where ∀ x, y, z : T · T.equ(x, y) ⇒ T.equ(bOp(x, z), bOp(y, z)) ∧ T.equ(bOp(z, x), bOp(z, y)) { 
  	Theorems {
  		BaseOpTheorem:
- 		   ∀ a, b, x, y : T · T.equ(a, b) ∧ T.equ(x, y) ⇒ T.equ(bOp(a, x), bOp(b, y));
+ 		  ∀ a, b, x, y : T · T.equ(a, b) ∧ T.equ(x, y) ⇒ T.equ(bOp(a, x), bOp(b, y));
+ 		   
+ 		BaseOpTheoremSimple Left:
+ 		  ∀ a, x, y : T · T.equ(x, y) ⇒ T.equ(bOp(a, x), bOp(a, y));
+ 		  
+ 		BaseOpTheoremSimple Right:
+ 		  ∀ x, y, a : T · T.equ(x, y) ⇒ T.equ(bOp(x, a), bOp(y, a));
  	}
  }
  
