@@ -37,5 +37,5 @@ Extend Monoid (Pow) {
 		  
 		RaiseToL addRule:
 		  ∀ x : M, p, q :pNat · equ(op(raiseToL(x, p), raiseToL(x, q)), raiseToL(x, p add q)); 
-	} 
-}
+	}
+} 

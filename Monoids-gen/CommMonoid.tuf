@@ -3,25 +3,25 @@
 <org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/Monoids-gen">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Monoids-gen/Monoid.dtf|org.eventb.theory.core.deployedTheoryRoot#Monoid"/>
 </org.eventb.theory.core.importTheoryProject>
-<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="CommMonoid_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="CommMonoid" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
-<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ M ∣ M ∈ Monoid_T(T) ∧ (∀x, y·x ∈ T ∧ y ∈ T ⇒ Monoid_equ(T, M)(Monoid_op(T, M)(x ↦ y) ↦ Monoid_op(T, M)(y ↦ x)) = TRUE)}"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ M ∣ M ∈ Monoid(T) ∧ (∀x, y·x ∈ T ∧ y ∈ T ⇒ (Monoid_op(T, M)(x ↦ y) ↦ Monoid_op(T, M)(y ↦ x))∈Monoid_equ(T, M))}"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.typeParameter name=")" org.eventb.core.identifier="T_EvB"/>
 <org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="CommMonoid_equ" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="CommMonoid_T(T)" org.eventb.core.identifier="M"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="CommMonoid(T)" org.eventb.core.identifier="M"/>
 <org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj2(prj1(prj1(M)))"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="CommMonoid_op" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="CommMonoid_T(T)" org.eventb.core.identifier="M"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="CommMonoid(T)" org.eventb.core.identifier="M"/>
 <org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj2(prj1(M))"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.newOperatorDefinition name="," org.eventb.core.label="CommMonoid_ident" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
-<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="CommMonoid_T(T)" org.eventb.core.identifier="M"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="CommMonoid(T)" org.eventb.core.identifier="M"/>
 <org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj2(M)"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.theorem name="-" org.eventb.core.label="LeftPow equals RightPow:" org.eventb.core.predicate="∀T, equ, op, ident·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ CommMonoid_T(T) ⇒ (∀x, p·x ∈ T ∧ p ∈ pNat ⇒ equ(Monoid_raiseToL(T, T ↦ equ ↦ op ↦ ident)(x ↦ p) ↦ Monoid_raiseToR(T, T ↦ equ ↦ op ↦ ident)(x ↦ p)) = TRUE)"/>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="LeftPow equals RightPow:" org.eventb.core.predicate="∀T, equ, op, ident·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ CommMonoid(T) ⇒ (∀x, p·x ∈ T ∧ p ∈ pNat ⇒ (Monoid_raiseToL(T, T ↦ equ ↦ op ↦ ident, x, p) ↦ Monoid_raiseToR(T, T ↦ equ ↦ op ↦ ident, x, p))∈equ)"/>
 </org.eventb.theory.core.theoryRoot>

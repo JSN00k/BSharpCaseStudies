@@ -9,7 +9,7 @@ Datatype pNat
 		match x {
 			| zero : y
 			| suc(xs) : suc(xs add y)
-		}
+		} 
 	
 	add2(x : pNat) : pNat suc(suc(x))
 	
@@ -18,14 +18,16 @@ Datatype pNat
 	Theorems {
 		suc out of addition:
 		  ∀ x, y : pNat · x add suc(y) = suc(x add y);
+		add zero:
+		  ∀ x : pNat · x add zero = x;
 	}
 } 
 
-From Monoids Import Monoid.*
+From Monoids Import Monoid.* 
 CommMonoid.*
 
 Extend pNat (mon_Add) {
-	Instance CommMonoid<pNat>(add, zero) addMon (times = raiseToL)
+	Instance CommMonoid<pNat>(add, zero) addMon (times = raiseToL) 
 	
 	Instance CommMonoid<pNat>(times, suc(zero)) timesMon (power = raiseToL) 
 }

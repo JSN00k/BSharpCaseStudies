@@ -29,6 +29,7 @@
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λx·x ∈ pNat ∣ pNat_add2(x)"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.theorem name="." org.eventb.core.label="TypingTheorem add2" org.eventb.core.predicate="∀x·x ∈ pNat ⇒ (pNat_add2(x) ∈ (pNat))"/>
-<org.eventb.theory.core.theorem name="/" org.eventb.core.label="pNat_Setoid in Setoid" org.eventb.core.predicate="pNat ↦ (λx ↦ y·⊤ ∣ bool(x = y)) ∈ Setoid_T(pNat)"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="pNat_Setoid in Setoid" org.eventb.core.predicate="pNat ↦ { x ↦ y ∣ x = y} ∈ Setoid(pNat)"/>
 <org.eventb.theory.core.theorem name="0" org.eventb.core.label="suc out of addition:" org.eventb.core.predicate="∀x, y·x ∈ pNat ∧ y ∈ pNat ⇒ ((x) pNat_add (suc(y)) = (suc((x) pNat_add (y))))"/>
+<org.eventb.theory.core.theorem name="1" org.eventb.core.label="add zero:" org.eventb.core.predicate="∀x·x ∈ pNat ⇒ ((x) pNat_add (zero) = (x))"/>
 </org.eventb.theory.core.theoryRoot>

@@ -19,7 +19,7 @@ Class EquivRel<T>[e] : ReflexRel<T>, SymetricRel<T>, TransRel<T> {
 		TransInverse:
 			∀ x, y, z : T  · e(x, y) ∧ ¬ e(y, z) ⇒ ¬ e(x, z);
 		TransRewrite:
-			∀ x, y, z : T · e(x, y) ⇒ e(x, z) = e(y, z);
+			∀ x, y, z : T · e(x, y) ⇒ e(x, z) = e(y, z); 
 	}
 }
 

@@ -3,7 +3,7 @@
 <org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/pNat-gen">
 <org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/pNat-gen/pNat.dtf|org.eventb.theory.core.deployedTheoryRoot#pNat"/>
 </org.eventb.theory.core.importTheoryProject>
-<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="pNatCommMon_T" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ M ∣ M ∈ CommMonoid_T(pNat)}"/>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="pNatCommMon" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="{ M ∣ M ∈ CommMonoid(pNat)}"/>
 </org.eventb.theory.core.newOperatorDefinition>
 </org.eventb.theory.core.theoryRoot>

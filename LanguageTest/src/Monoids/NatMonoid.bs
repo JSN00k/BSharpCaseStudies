@@ -11,4 +11,4 @@ Class pNatCommMon[M] : CommMonoid<pNat> {
 	// I think that maybe this should be inferred from the pNat type as the default equivalence relation, but it
 	// currently is not. I'm not sure how much work this would involve. I could certainly encode this easily with a 
 	// where statement instead.
-}
+} 
