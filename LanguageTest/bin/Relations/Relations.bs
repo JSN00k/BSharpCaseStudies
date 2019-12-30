@@ -2,7 +2,7 @@ package Relations
 
 From main Import main.*
  
-Class ReflexRel<T>[r] : T × T → Bool where ∀ x : T · r(x, x) { }
+Class ReflexRel<T>[r] : T × T → Bool where ∀ x : T · r(x, x) { } 
 
 Class SymetricRel<T>[s] : T × T → Bool where ∀ x : T, y : T · s(x, y) ⇒ s(y, x) {
 	Theorems {
@@ -23,4 +23,4 @@ Class EquivRel<T>[e] : ReflexRel<T>, SymetricRel<T>, TransRel<T> {
 	}
 }
 
-Class Setoid<T>[S] : ℙ(T) (equ : EquivRel<S>) { } 
+Class Setoid<T>[S] : ℙ(T) (equ : EquivRel<S>) { }

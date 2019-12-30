@@ -25,4 +25,4 @@ Class SemiGroup[SG] : Setoid (op : AssocOp<SG>) {
 			∀ LRident, LorRident : SG · (∀ x : SG · equ(op(LRident, x), x) ∧ equ(op(x, LRident), x) 
 				∧ ((∀ y :SG · equ(op(LorRident, y), y)) ∨ (∀ z : SG · equ(op(z, LorRident), z)))) ⇒ equ(LorRident, LRident);
 	}
-} 
+}

@@ -11,7 +11,7 @@ Datatype pNat
 			| suc(xs) : suc(xs add y)
 		} 
 	
-	add2(x : pNat) : pNat suc(suc(x))
+	add2(x : pNat) : pNat suc(suc(x)) 
 	
 	Instance Setoid<pNat>([=])
 	
@@ -31,3 +31,35 @@ Extend pNat (mon_Add) {
 	
 	Instance CommMonoid<pNat>(times, suc(zero)) timesMon (power = raiseToL) 
 }
+
+Extend pNat (minus) {
+		decr(x : pNat) : pNat
+		match x {
+			| zero : zero
+			| suc(xs) : xs 
+		}
+	
+	minus(x, y : pNat) : pNat INFIX 99 
+		match y {
+			| zero : x
+			| suc(ys) : decr(x minus ys)
+		}
+}
+
+Extend pNat (divide) {
+	divMod(n, d, count : pNat) : pNat × pNat 
+	  match n {
+	  	| zero : (zero, zero)
+	  	| suc(ns) : 
+	  		if suc(ns) = d {
+	  			(suc(count), zero)
+	  		} else {
+	  			if suc(ns) minus d = zero {
+	  				(count, suc(ns))
+	  			} else {
+	  				divMod(suc(ns) minus d, d, suc(count))
+	  			}
+	  		}
+	  	}
+}
+

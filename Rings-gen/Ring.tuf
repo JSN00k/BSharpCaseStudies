@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.importTheoryProject name="'" org.eventb.theory.core.importTheoryProject="/Groups-gen">
+<org.eventb.theory.core.importTheory name="'" org.eventb.theory.core.importTheory="/Groups-gen/AbGroup.dtf|org.eventb.theory.core.deployedTheoryRoot#AbGroup"/>
+</org.eventb.theory.core.importTheoryProject>
+<org.eventb.theory.core.newOperatorDefinition name="(" org.eventb.core.label="Ring" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ R ↦ (G ↦ M) ∣ R ∈ Setoid(T) ∧ G ∈ AbGroup(T) ∧ M ∈ Monoid(T) ∧ ((∀x, y, z·x ∈ T ∧ y ∈ T ∧ z ∈ T ⇒ (Monoid_op(T, M)(x ↦ AbGroup_op(T, G)(y ↦ z)) ↦ AbGroup_op(T, G)(Monoid_op(T, M)(x ↦ y) ↦ Monoid_op(T, M)(x ↦ z)))∈Setoid_equ(T, R))∧(∀x, y, z·x ∈ T ∧ y ∈ T ∧ z ∈ T ⇒ (Monoid_op(T, M)(AbGroup_op(T, G)(y ↦ z) ↦ x) ↦ AbGroup_op(T, G)(Monoid_op(T, M)(y ↦ x) ↦ Monoid_op(T, M)(z ↦ x)))∈Setoid_equ(T, R)))}"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.typeParameter name=")" org.eventb.core.identifier="T_EvB"/>
+<org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="Ring_equ" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Ring(T)" org.eventb.core.identifier="R"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj2(prj1(R))"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="Ring_G" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Ring(T)" org.eventb.core.identifier="R"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj1(prj2(R))"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="," org.eventb.core.label="Ring_M" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Ring(T)" org.eventb.core.identifier="R"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj2(prj2(R))"/>
+</org.eventb.theory.core.newOperatorDefinition>
+</org.eventb.theory.core.theoryRoot>

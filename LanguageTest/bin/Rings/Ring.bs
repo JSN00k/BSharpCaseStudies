@@ -1,0 +1,10 @@
+package Rings
+
+From Groups Import AbGroup.*
+From Monoids Import Monoid.*
+From Relations Import Relations.*
+
+Class Ring[R] : Setoid (G : AbGroup<R>, M : Monoid<R>) where 
+	∀ x, y, z : R · equ(M.op(x, G.op(y, z)), G.op(M.op(x, y), M.op(x, z)));
+	∀ x, y, z : R · equ(M.op(G.op(y, z), x), G.op(M.op(y, x), M.op(z, x))); {
+}

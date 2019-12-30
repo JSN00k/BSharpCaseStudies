@@ -13,8 +13,8 @@ From Relations Import Relations.Setoid
  		BaseOpTheoremSimple Right:
  		  ∀ x, y, a : T · T.equ(x, y) ⇒ T.equ(bOp(x, a), bOp(y, a));
  	}
- }
- 
+ } 
+
 Class AssocOp<T:Setoid>[aOp] : baseOp<T> where ∀ x, y, z : T · T.equ(aOp(x, aOp(y, z)),  aOp(aOp(x, y), z)) { }
 
 Class CommOp<T:Setoid>[cOp] : baseOp<T> where ∀ x, y : T · T.equ(cOp(x, y), cOp(y, x)) { }

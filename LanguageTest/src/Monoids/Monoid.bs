@@ -11,7 +11,7 @@ Class Monoid[M] : SemiGroup (ident : M)
 		unique ident:
 			∀ oIdent : M · (∀ r : M · equ(op(oIdent, r), r)) ∨ (∀ l : M · equ(op(l, oIdent), l)) ⇔ equ(oIdent, ident);
 	}
-}
+} 
  
 From pNat Import pNat.pNat
 
@@ -22,7 +22,7 @@ Extend Monoid (Pow) {
 			| suc(ps) : op(x, raiseToL(x, ps))
 		} 
 		
-	raiseToR(x : M, p : pNat) : M
+	raiseToR(x : M, p : pNat) : M 
 		match p {
 			| zero : ident
 			| suc(ps) : op(raiseToR(x, ps), x) 
