@@ -11,4 +11,19 @@
 <org.eventb.theory.core.directOperatorDefinition name="(" org.eventb.theory.core.formula="{ AG ∣ AG ∈ Group(T) ∩ CommMonoid(T)}"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.typeParameter name="*" org.eventb.core.identifier="T_EvB"/>
+<org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="AbGroup_equ" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="AbGroup(T)" org.eventb.core.identifier="AG"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj2(prj1(prj1(AG)))"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="," org.eventb.core.label="AbGroup_op" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="AbGroup(T)" org.eventb.core.identifier="AG"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj2(prj1(AG))"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="-" org.eventb.core.label="AbGroup_ident" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(T_EvB)" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="AbGroup(T)" org.eventb.core.identifier="AG"/>
+<org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj2(AG)"/>
+</org.eventb.theory.core.newOperatorDefinition>
 </org.eventb.theory.core.theoryRoot>

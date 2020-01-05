@@ -23,4 +23,5 @@
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Ring(T)" org.eventb.core.identifier="R"/>
 <org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj2(prj2(R))"/>
 </org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="Zero theorem:" org.eventb.core.predicate="∀T, equ, G, M·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ (G ↦ M) ∈ Ring(T) ⇒ (∀x·x ∈ T ⇒ (((Monoid_op(T, M)(x ↦ AbGroup_ident(T, G)) ↦ AbGroup_ident(T, G))∈equ) ∧ ((Monoid_op(T, M)(AbGroup_ident(T, G) ↦ x) ↦ AbGroup_ident(T, G))∈equ)))"/>
 </org.eventb.theory.core.theoryRoot>

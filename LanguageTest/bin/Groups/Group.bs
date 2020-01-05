@@ -4,6 +4,8 @@ From Monoids Import Monoid.*
 
 Class Group[G] : Monoid where ∀ x : G · ∃ y : G · equ(op(x, y), ident) ∧ equ(op(y, x), ident) {	
 	Theorems {
+		Indent Unique:
+		  ∀ x, y : G · equ(op(x, y), y) ⇔ equ(x, ident);
 		Inv unique:
 		  ∀ a, b, c : G · equ(op(a, b), ident)  ⇒ equ(op(b, a), ident);
 		Op Inverse:
@@ -15,4 +17,4 @@ Class Group[G] : Monoid where ∀ x : G · ∃ y : G · equ(op(x, y), ident) ∧
 		Inverse Func:
 		  ∃ inv : G → G · (∀ x : G · equ(op(inv(x), x), ident));
 	}
-}
+} 
