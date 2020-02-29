@@ -111,4 +111,11 @@
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λn ↦ d ↦ count·n ∈ pNat ∧ d ∈ pNat ∧ count ∈ pNat ∣ pNat_divMod(n, d, count)"/>
 </org.eventb.theory.core.newOperatorDefinition>
 <org.eventb.theory.core.theorem name="U" org.eventb.core.label="TypingTheorem divMod" org.eventb.core.predicate="∀n, d, count·n ∈ pNat ∧ d ∈ pNat ∧ count ∈ pNat ⇒ (pNat_divMod(n, d, count) ∈ (pNat × pNat))"/>
+<org.eventb.theory.core.proofRulesBlock name="V" org.eventb.core.label="rulesBlock1">
+<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="pNat"/>
+<org.eventb.theory.core.inferenceRule name=")" org.eventb.core.label="inf1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="Describe Me!">
+<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="pNat_times(x, y) ∈ pNat"/>
+</org.eventb.theory.core.inferenceRule>
+</org.eventb.theory.core.proofRulesBlock>
 </org.eventb.theory.core.theoryRoot>
