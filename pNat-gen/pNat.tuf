@@ -33,14 +33,23 @@
 <org.eventb.theory.core.theorem name="1" org.eventb.core.label="addMon left right ident is unique1:" org.eventb.core.predicate="∀LRident, Rident·LRident ∈ pNat ∧ Rident ∈ pNat ⇒ ((∀x·x ∈ pNat ⇒ ((((LRident pNat_add x) = (x)) ∧ ((x pNat_add LRident) = (x))) ∧ (∀y·y ∈ pNat ⇒ (y pNat_add Rident) = (y)))) ⇒ ((LRident) = (Rident)))"/>
 <org.eventb.theory.core.theorem name="2" org.eventb.core.label="addMon left right ident is unique2:" org.eventb.core.predicate="∀LRident, Lident·LRident ∈ pNat ∧ Lident ∈ pNat ⇒ ((∀x·x ∈ pNat ⇒ ((((LRident pNat_add x) = (x)) ∧ ((x pNat_add LRident) = (x))) ∧ (∀y·y ∈ pNat ⇒ (Lident pNat_add y) = (y)))) ⇒ ((Lident) = (LRident)))"/>
 <org.eventb.theory.core.theorem name="3" org.eventb.core.label="addMon left right ident is unique:" org.eventb.core.predicate="∀LRident, LorRident·LRident ∈ pNat ∧ LorRident ∈ pNat ⇒ ((∀x·x ∈ pNat ⇒ ((((LRident pNat_add x) = (x)) ∧ ((x pNat_add LRident) = (x))) ∧ ((∀y·y ∈ pNat ⇒ (LorRident pNat_add y) = (y)) ∨ (∀z·z ∈ pNat ⇒ (z pNat_add LorRident) = (z))))) ⇒ ((LorRident) = (LRident)))"/>
-<org.eventb.theory.core.theorem name="4" org.eventb.core.label="addMon ident:" org.eventb.core.predicate="∀x·x ∈ pNat ⇒ (((x pNat_add zero) = (zero)) ⇔ ((x) = (zero)))"/>
-<org.eventb.theory.core.theorem name="5" org.eventb.core.label="addMon unique ident:" org.eventb.core.predicate="∀oIdent·oIdent ∈ pNat ⇒ (((∀r·r ∈ pNat ⇒ (oIdent pNat_add r) = (r)) ∨ (∀l·l ∈ pNat ⇒ (l pNat_add oIdent) = (l))) ⇔ ((oIdent) = (zero)))"/>
-<org.eventb.theory.core.theorem name="6" org.eventb.core.label="addMon RaiseToL Equiv Preservation:" org.eventb.core.predicate="∀x, y, p·x ∈ pNat ∧ y ∈ pNat ∧ p ∈ pNat ⇒ (((x) = (y)) ⇒ (pNat_times(x, p) = pNat_times(y, p)))"/>
-<org.eventb.theory.core.theorem name="7" org.eventb.core.label="addMon RaiseToR Equiv Preservation:" org.eventb.core.predicate="∀x, y, p·x ∈ pNat ∧ y ∈ pNat ∧ p ∈ pNat ⇒ (((x) = (y)) ⇒ (pNat_addMon_raiseToR(x, p) = pNat_addMon_raiseToR(y, p)))"/>
-<org.eventb.theory.core.theorem name="8" org.eventb.core.label="addMon RaiseToL addRule:" org.eventb.core.predicate="∀x, p, q·x ∈ pNat ∧ p ∈ pNat ∧ q ∈ pNat ⇒ (pNat_times(x, p) pNat_add pNat_times(x, q)) = pNat_times(x, (p) pNat_add (q))"/>
-<org.eventb.theory.core.theorem name="9" org.eventb.core.label="addMon LeftPow equals RightPow:" org.eventb.core.predicate="∀x, p·x ∈ pNat ∧ p ∈ pNat ⇒ pNat_times(x, p) = pNat_addMon_raiseToR(x, p)"/>
-<org.eventb.theory.core.theorem name=":" org.eventb.core.label="timesMon in CommMonoid" org.eventb.core.predicate="pNat ↦ { x ↦ y ∣ x = y} ↦ pNat_times_P ↦ suc(zero) ∈ CommMonoid(pNat)"/>
-<org.eventb.theory.core.newOperatorDefinition name=";" org.eventb.core.label="pNat_power" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.theorem name="4" org.eventb.core.label="addMon ident is ident left:" org.eventb.core.predicate="∀x·x ∈ pNat ⇒ (x pNat_add zero) = (x)"/>
+<org.eventb.theory.core.theorem name="5" org.eventb.core.label="addMon ident is ident right:" org.eventb.core.predicate="∀x·x ∈ pNat ⇒ (zero pNat_add x) = (x)"/>
+<org.eventb.theory.core.theorem name="6" org.eventb.core.label="addMon ident:" org.eventb.core.predicate="∀x·x ∈ pNat ⇒ (((x pNat_add zero) = (zero)) ⇔ ((x) = (zero)))"/>
+<org.eventb.theory.core.theorem name="7" org.eventb.core.label="addMon unique ident:" org.eventb.core.predicate="∀oIdent·oIdent ∈ pNat ⇒ (((∀r·r ∈ pNat ⇒ (oIdent pNat_add r) = (r)) ∨ (∀l·l ∈ pNat ⇒ (l pNat_add oIdent) = (l))) ⇔ ((oIdent) = (zero)))"/>
+<org.eventb.theory.core.theorem name="8" org.eventb.core.label="addMon RaiseToL Equiv Preservation:" org.eventb.core.predicate="∀x, y, p·x ∈ pNat ∧ y ∈ pNat ∧ p ∈ pNat ⇒ (((x) = (y)) ⇒ (pNat_times(x, p) = pNat_times(y, p)))"/>
+<org.eventb.theory.core.theorem name="9" org.eventb.core.label="addMon RaiseToR Equiv Preservation:" org.eventb.core.predicate="∀x, y, p·x ∈ pNat ∧ y ∈ pNat ∧ p ∈ pNat ⇒ (((x) = (y)) ⇒ (pNat_addMon_raiseToR(x, p) = pNat_addMon_raiseToR(y, p)))"/>
+<org.eventb.theory.core.theorem name=":" org.eventb.core.label="addMon RaiseToL addRule:" org.eventb.core.predicate="∀x, p, q·x ∈ pNat ∧ p ∈ pNat ∧ q ∈ pNat ⇒ (pNat_times(x, p) pNat_add pNat_times(x, q)) = pNat_times(x, (p) pNat_add (q))"/>
+<org.eventb.theory.core.theorem name=";" org.eventb.core.label="addMon LeftPow equals RightPow:" org.eventb.core.predicate="∀x, p·x ∈ pNat ∧ p ∈ pNat ⇒ pNat_times(x, p) = pNat_addMon_raiseToR(x, p)"/>
+<org.eventb.theory.core.theorem name="=" org.eventb.core.label="Anything times zero on left:" org.eventb.core.predicate="∀x·x ∈ pNat ⇒ (pNat_times(x, zero) = (zero))"/>
+<org.eventb.theory.core.theorem name="&gt;" org.eventb.core.label="Zero times anything is Zero:" org.eventb.core.predicate="∀x·x ∈ pNat ⇒ (pNat_times(zero, x) = (zero))"/>
+<org.eventb.theory.core.theorem name="?" org.eventb.core.label="sucX times Y:" org.eventb.core.predicate="∀x, y·x ∈ pNat ∧ y ∈ pNat ⇒ (pNat_times(suc(x), y) = (y) pNat_add pNat_times(x, y))"/>
+<org.eventb.theory.core.theorem name="@" org.eventb.core.label="Distrib Left Times:" org.eventb.core.predicate="∀x, y, z·x ∈ pNat ∧ y ∈ pNat ∧ z ∈ pNat ⇒ (pNat_times(x, (y) pNat_add (z)) = pNat_times(x, y) pNat_add pNat_times(x, z))"/>
+<org.eventb.theory.core.theorem name="A" org.eventb.core.label="Distrib Right Times:" org.eventb.core.predicate="∀x, y, z·x ∈ pNat ∧ y ∈ pNat ∧ z ∈ pNat ⇒ (pNat_times((y) pNat_add (z), x) = pNat_times(y, x) pNat_add pNat_times(z, x))"/>
+<org.eventb.theory.core.theorem name="B" org.eventb.core.label="Times Associative:" org.eventb.core.predicate="∀x, y, z·x ∈ pNat ∧ y ∈ pNat ∧ z ∈ pNat ⇒ (pNat_times(x, pNat_times(y, z)) = pNat_times(pNat_times(x, y), z))"/>
+<org.eventb.theory.core.theorem name="C" org.eventb.core.label="Times Commutative:" org.eventb.core.predicate="∀x, y·x ∈ pNat ∧ y ∈ pNat ⇒ (pNat_times(x, y) = pNat_times(y, x))"/>
+<org.eventb.theory.core.theorem name="D" org.eventb.core.label="timesMon in CommMonoid" org.eventb.core.predicate="pNat ↦ { x ↦ y ∣ x = y} ↦ pNat_times_P ↦ suc(zero) ∈ CommMonoid(pNat)"/>
+<org.eventb.theory.core.newOperatorDefinition name="E" org.eventb.core.label="pNat_power" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="pNat" org.eventb.core.identifier="x"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="pNat" org.eventb.core.identifier="p"/>
 <org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="p">
@@ -48,11 +57,11 @@
 <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(ps)" org.eventb.theory.core.formula="pNat_times(x, pNat_power(x, ps))"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="=" org.eventb.core.label="pNat_power_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.newOperatorDefinition name="F" org.eventb.core.label="pNat_power_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λx ↦ p·x ∈ pNat ∧ p ∈ pNat ∣ pNat_power(x, p)"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.theorem name="&gt;" org.eventb.core.label="timesMon TypingTheorem raiseToL" org.eventb.core.predicate="∀x, p·x ∈ pNat ∧ p ∈ pNat ⇒ (pNat_power(x, p) ∈ (pNat))"/>
-<org.eventb.theory.core.newOperatorDefinition name="?" org.eventb.core.label="pNat_timesMon_raiseToR" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.theorem name="G" org.eventb.core.label="timesMon TypingTheorem raiseToL" org.eventb.core.predicate="∀x, p·x ∈ pNat ∧ p ∈ pNat ⇒ (pNat_power(x, p) ∈ (pNat))"/>
+<org.eventb.theory.core.newOperatorDefinition name="H" org.eventb.core.label="pNat_timesMon_raiseToR" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="pNat" org.eventb.core.identifier="x"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="pNat" org.eventb.core.identifier="p"/>
 <org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="p">
@@ -60,33 +69,35 @@
 <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(ps)" org.eventb.theory.core.formula="pNat_times(pNat_timesMon_raiseToR(x, ps), x)"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="@" org.eventb.core.label="pNat_timesMon_raiseToR_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.newOperatorDefinition name="I" org.eventb.core.label="pNat_timesMon_raiseToR_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λx ↦ p·x ∈ pNat ∧ p ∈ pNat ∣ pNat_timesMon_raiseToR(x, p)"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.theorem name="A" org.eventb.core.label="timesMon TypingTheorem raiseToR" org.eventb.core.predicate="∀x, p·x ∈ pNat ∧ p ∈ pNat ⇒ (pNat_timesMon_raiseToR(x, p) ∈ (pNat))"/>
-<org.eventb.theory.core.theorem name="B" org.eventb.core.label="timesMon 2 left ident no right:" org.eventb.core.predicate="∀l1, l2·l1 ∈ pNat ∧ l2 ∈ pNat ⇒ ((((∀x·x ∈ pNat ⇒ (pNat_times(l1, x)) = (x)) ∧ (∀y·y ∈ pNat ⇒ (pNat_times(l2, y)) = (y))) ∧ ¬((l1) = (l2))) ⇒ ¬(∃r·r ∈ pNat ∧ (∀z·z ∈ pNat ⇒ (pNat_times(z, r)) = (z))))"/>
-<org.eventb.theory.core.theorem name="C" org.eventb.core.label="timesMon 2 right ident no left:" org.eventb.core.predicate="∀r1, r2·r1 ∈ pNat ∧ r2 ∈ pNat ⇒ ((((∀x·x ∈ pNat ⇒ (pNat_times(x, r1)) = (x)) ∧ (∀y·y ∈ pNat ⇒ (pNat_times(y, r2)) = (y))) ∧ ¬((r1) = (r2))) ⇒ ¬(∃l·l ∈ pNat ∧ (∀z·z ∈ pNat ⇒ (pNat_times(l, z)) = (z))))"/>
-<org.eventb.theory.core.theorem name="D" org.eventb.core.label="timesMon left right ident is unique1:" org.eventb.core.predicate="∀LRident, Rident·LRident ∈ pNat ∧ Rident ∈ pNat ⇒ ((∀x·x ∈ pNat ⇒ ((((pNat_times(LRident, x)) = (x)) ∧ ((pNat_times(x, LRident)) = (x))) ∧ (∀y·y ∈ pNat ⇒ (pNat_times(y, Rident)) = (y)))) ⇒ ((LRident) = (Rident)))"/>
-<org.eventb.theory.core.theorem name="E" org.eventb.core.label="timesMon left right ident is unique2:" org.eventb.core.predicate="∀LRident, Lident·LRident ∈ pNat ∧ Lident ∈ pNat ⇒ ((∀x·x ∈ pNat ⇒ ((((pNat_times(LRident, x)) = (x)) ∧ ((pNat_times(x, LRident)) = (x))) ∧ (∀y·y ∈ pNat ⇒ (pNat_times(Lident, y)) = (y)))) ⇒ ((Lident) = (LRident)))"/>
-<org.eventb.theory.core.theorem name="F" org.eventb.core.label="timesMon left right ident is unique:" org.eventb.core.predicate="∀LRident, LorRident·LRident ∈ pNat ∧ LorRident ∈ pNat ⇒ ((∀x·x ∈ pNat ⇒ ((((pNat_times(LRident, x)) = (x)) ∧ ((pNat_times(x, LRident)) = (x))) ∧ ((∀y·y ∈ pNat ⇒ (pNat_times(LorRident, y)) = (y)) ∨ (∀z·z ∈ pNat ⇒ (pNat_times(z, LorRident)) = (z))))) ⇒ ((LorRident) = (LRident)))"/>
-<org.eventb.theory.core.theorem name="G" org.eventb.core.label="timesMon ident:" org.eventb.core.predicate="∀x·x ∈ pNat ⇒ (((pNat_times(x, suc(zero))) = (suc(zero))) ⇔ ((x) = (suc(zero))))"/>
-<org.eventb.theory.core.theorem name="H" org.eventb.core.label="timesMon unique ident:" org.eventb.core.predicate="∀oIdent·oIdent ∈ pNat ⇒ (((∀r·r ∈ pNat ⇒ (pNat_times(oIdent, r)) = (r)) ∨ (∀l·l ∈ pNat ⇒ (pNat_times(l, oIdent)) = (l))) ⇔ ((oIdent) = (suc(zero))))"/>
-<org.eventb.theory.core.theorem name="I" org.eventb.core.label="timesMon RaiseToL Equiv Preservation:" org.eventb.core.predicate="∀x, y, p·x ∈ pNat ∧ y ∈ pNat ∧ p ∈ pNat ⇒ (((x) = (y)) ⇒ (pNat_power(x, p) = pNat_power(y, p)))"/>
-<org.eventb.theory.core.theorem name="J" org.eventb.core.label="timesMon RaiseToR Equiv Preservation:" org.eventb.core.predicate="∀x, y, p·x ∈ pNat ∧ y ∈ pNat ∧ p ∈ pNat ⇒ (((x) = (y)) ⇒ (pNat_timesMon_raiseToR(x, p) = pNat_timesMon_raiseToR(y, p)))"/>
-<org.eventb.theory.core.theorem name="K" org.eventb.core.label="timesMon RaiseToL addRule:" org.eventb.core.predicate="∀x, p, q·x ∈ pNat ∧ p ∈ pNat ∧ q ∈ pNat ⇒ (pNat_times(pNat_power(x, p), pNat_power(x, q))) = pNat_power(x, (p) pNat_add (q))"/>
-<org.eventb.theory.core.theorem name="L" org.eventb.core.label="timesMon LeftPow equals RightPow:" org.eventb.core.predicate="∀x, p·x ∈ pNat ∧ p ∈ pNat ⇒ pNat_power(x, p) = pNat_timesMon_raiseToR(x, p)"/>
-<org.eventb.theory.core.newOperatorDefinition name="M" org.eventb.core.label="pNat_decr" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.theorem name="J" org.eventb.core.label="timesMon TypingTheorem raiseToR" org.eventb.core.predicate="∀x, p·x ∈ pNat ∧ p ∈ pNat ⇒ (pNat_timesMon_raiseToR(x, p) ∈ (pNat))"/>
+<org.eventb.theory.core.theorem name="K" org.eventb.core.label="timesMon 2 left ident no right:" org.eventb.core.predicate="∀l1, l2·l1 ∈ pNat ∧ l2 ∈ pNat ⇒ ((((∀x·x ∈ pNat ⇒ (pNat_times(l1, x)) = (x)) ∧ (∀y·y ∈ pNat ⇒ (pNat_times(l2, y)) = (y))) ∧ ¬((l1) = (l2))) ⇒ ¬(∃r·r ∈ pNat ∧ (∀z·z ∈ pNat ⇒ (pNat_times(z, r)) = (z))))"/>
+<org.eventb.theory.core.theorem name="L" org.eventb.core.label="timesMon 2 right ident no left:" org.eventb.core.predicate="∀r1, r2·r1 ∈ pNat ∧ r2 ∈ pNat ⇒ ((((∀x·x ∈ pNat ⇒ (pNat_times(x, r1)) = (x)) ∧ (∀y·y ∈ pNat ⇒ (pNat_times(y, r2)) = (y))) ∧ ¬((r1) = (r2))) ⇒ ¬(∃l·l ∈ pNat ∧ (∀z·z ∈ pNat ⇒ (pNat_times(l, z)) = (z))))"/>
+<org.eventb.theory.core.theorem name="M" org.eventb.core.label="timesMon left right ident is unique1:" org.eventb.core.predicate="∀LRident, Rident·LRident ∈ pNat ∧ Rident ∈ pNat ⇒ ((∀x·x ∈ pNat ⇒ ((((pNat_times(LRident, x)) = (x)) ∧ ((pNat_times(x, LRident)) = (x))) ∧ (∀y·y ∈ pNat ⇒ (pNat_times(y, Rident)) = (y)))) ⇒ ((LRident) = (Rident)))"/>
+<org.eventb.theory.core.theorem name="N" org.eventb.core.label="timesMon left right ident is unique2:" org.eventb.core.predicate="∀LRident, Lident·LRident ∈ pNat ∧ Lident ∈ pNat ⇒ ((∀x·x ∈ pNat ⇒ ((((pNat_times(LRident, x)) = (x)) ∧ ((pNat_times(x, LRident)) = (x))) ∧ (∀y·y ∈ pNat ⇒ (pNat_times(Lident, y)) = (y)))) ⇒ ((Lident) = (LRident)))"/>
+<org.eventb.theory.core.theorem name="O" org.eventb.core.label="timesMon left right ident is unique:" org.eventb.core.predicate="∀LRident, LorRident·LRident ∈ pNat ∧ LorRident ∈ pNat ⇒ ((∀x·x ∈ pNat ⇒ ((((pNat_times(LRident, x)) = (x)) ∧ ((pNat_times(x, LRident)) = (x))) ∧ ((∀y·y ∈ pNat ⇒ (pNat_times(LorRident, y)) = (y)) ∨ (∀z·z ∈ pNat ⇒ (pNat_times(z, LorRident)) = (z))))) ⇒ ((LorRident) = (LRident)))"/>
+<org.eventb.theory.core.theorem name="P" org.eventb.core.label="timesMon ident is ident left:" org.eventb.core.predicate="∀x·x ∈ pNat ⇒ (pNat_times(x, suc(zero))) = (x)"/>
+<org.eventb.theory.core.theorem name="Q" org.eventb.core.label="timesMon ident is ident right:" org.eventb.core.predicate="∀x·x ∈ pNat ⇒ (pNat_times(suc(zero), x)) = (x)"/>
+<org.eventb.theory.core.theorem name="R" org.eventb.core.label="timesMon ident:" org.eventb.core.predicate="∀x·x ∈ pNat ⇒ (((pNat_times(x, suc(zero))) = (suc(zero))) ⇔ ((x) = (suc(zero))))"/>
+<org.eventb.theory.core.theorem name="S" org.eventb.core.label="timesMon unique ident:" org.eventb.core.predicate="∀oIdent·oIdent ∈ pNat ⇒ (((∀r·r ∈ pNat ⇒ (pNat_times(oIdent, r)) = (r)) ∨ (∀l·l ∈ pNat ⇒ (pNat_times(l, oIdent)) = (l))) ⇔ ((oIdent) = (suc(zero))))"/>
+<org.eventb.theory.core.theorem name="T" org.eventb.core.label="timesMon RaiseToL Equiv Preservation:" org.eventb.core.predicate="∀x, y, p·x ∈ pNat ∧ y ∈ pNat ∧ p ∈ pNat ⇒ (((x) = (y)) ⇒ (pNat_power(x, p) = pNat_power(y, p)))"/>
+<org.eventb.theory.core.theorem name="U" org.eventb.core.label="timesMon RaiseToR Equiv Preservation:" org.eventb.core.predicate="∀x, y, p·x ∈ pNat ∧ y ∈ pNat ∧ p ∈ pNat ⇒ (((x) = (y)) ⇒ (pNat_timesMon_raiseToR(x, p) = pNat_timesMon_raiseToR(y, p)))"/>
+<org.eventb.theory.core.theorem name="V" org.eventb.core.label="timesMon RaiseToL addRule:" org.eventb.core.predicate="∀x, p, q·x ∈ pNat ∧ p ∈ pNat ∧ q ∈ pNat ⇒ (pNat_times(pNat_power(x, p), pNat_power(x, q))) = pNat_power(x, (p) pNat_add (q))"/>
+<org.eventb.theory.core.theorem name="W" org.eventb.core.label="timesMon LeftPow equals RightPow:" org.eventb.core.predicate="∀x, p·x ∈ pNat ∧ p ∈ pNat ⇒ pNat_power(x, p) = pNat_timesMon_raiseToR(x, p)"/>
+<org.eventb.theory.core.newOperatorDefinition name="X" org.eventb.core.label="pNat_decr" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="pNat" org.eventb.core.identifier="x"/>
 <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="x">
 <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="zero" org.eventb.theory.core.formula="zero"/>
 <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(xs)" org.eventb.theory.core.formula="xs"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="N" org.eventb.core.label="pNat_decr_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.newOperatorDefinition name="Y" org.eventb.core.label="pNat_decr_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λx·x ∈ pNat ∣ pNat_decr(x)"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.theorem name="O" org.eventb.core.label="TypingTheorem decr" org.eventb.core.predicate="∀x·x ∈ pNat ⇒ (pNat_decr(x) ∈ (pNat))"/>
-<org.eventb.theory.core.newOperatorDefinition name="P" org.eventb.core.label="pNat_minus" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
+<org.eventb.theory.core.theorem name="Z" org.eventb.core.label="TypingTheorem decr" org.eventb.core.predicate="∀x·x ∈ pNat ⇒ (pNat_decr(x) ∈ (pNat))"/>
+<org.eventb.theory.core.newOperatorDefinition name="[" org.eventb.core.label="pNat_minus" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="pNat" org.eventb.core.identifier="x"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="pNat" org.eventb.core.identifier="y"/>
 <org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="y">
@@ -94,11 +105,11 @@
 <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(ys)" org.eventb.theory.core.formula="pNat_decr((x) pNat_minus (ys))"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="Q" org.eventb.core.label="pNat_minus_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.newOperatorDefinition name="\" org.eventb.core.label="pNat_minus_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λx ↦ y·x ∈ pNat ∧ y ∈ pNat ∣ x pNat_minus y"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.theorem name="R" org.eventb.core.label="TypingTheorem minus" org.eventb.core.predicate="∀x, y·x ∈ pNat ∧ y ∈ pNat ⇒ (x pNat_minus y ∈ (pNat))"/>
-<org.eventb.theory.core.newOperatorDefinition name="S" org.eventb.core.label="pNat_divMod" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.theorem name="]" org.eventb.core.label="TypingTheorem minus" org.eventb.core.predicate="∀x, y·x ∈ pNat ∧ y ∈ pNat ⇒ (x pNat_minus y ∈ (pNat))"/>
+<org.eventb.theory.core.newOperatorDefinition name="^" org.eventb.core.label="pNat_divMod" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="pNat" org.eventb.core.identifier="n"/>
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="pNat" org.eventb.core.identifier="d"/>
 <org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="pNat" org.eventb.core.identifier="count"/>
@@ -107,15 +118,8 @@
 <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="suc(ns)" org.eventb.theory.core.formula="COND((suc(ns)) = (d), suc(count)↦zero, COND((suc(ns)) pNat_minus (d) = (zero), count↦suc(ns), pNat_divMod((suc(ns)) pNat_minus (d), d, suc(count))))"/>
 </org.eventb.theory.core.recursiveOperatorDefinition>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.newOperatorDefinition name="T" org.eventb.core.label="pNat_divMod_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.newOperatorDefinition name="_" org.eventb.core.label="pNat_divMod_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
 <org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λn ↦ d ↦ count·n ∈ pNat ∧ d ∈ pNat ∧ count ∈ pNat ∣ pNat_divMod(n, d, count)"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.theorem name="U" org.eventb.core.label="TypingTheorem divMod" org.eventb.core.predicate="∀n, d, count·n ∈ pNat ∧ d ∈ pNat ∧ count ∈ pNat ⇒ (pNat_divMod(n, d, count) ∈ (pNat × pNat))"/>
-<org.eventb.theory.core.proofRulesBlock name="V" org.eventb.core.label="rulesBlock1">
-<org.eventb.theory.core.metaVariable name="'" org.eventb.core.identifier="x" org.eventb.theory.core.type="pNat"/>
-<org.eventb.theory.core.metaVariable name="(" org.eventb.core.identifier="y" org.eventb.theory.core.type="pNat"/>
-<org.eventb.theory.core.inferenceRule name=")" org.eventb.core.label="inf1" org.eventb.theory.core.applicability="interactive" org.eventb.theory.core.desc="Describe Me!">
-<org.eventb.theory.core.infer name="(" org.eventb.core.predicate="pNat_times(x, y) ∈ pNat"/>
-</org.eventb.theory.core.inferenceRule>
-</org.eventb.theory.core.proofRulesBlock>
+<org.eventb.theory.core.theorem name="`" org.eventb.core.label="TypingTheorem divMod" org.eventb.core.predicate="∀n, d, count·n ∈ pNat ∧ d ∈ pNat ∧ count ∈ pNat ⇒ (pNat_divMod(n, d, count) ∈ (pNat × pNat))"/>
 </org.eventb.theory.core.theoryRoot>

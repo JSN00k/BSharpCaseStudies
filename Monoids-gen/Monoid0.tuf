@@ -23,6 +23,8 @@
 <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Monoid(T)" org.eventb.core.identifier="M"/>
 <org.eventb.theory.core.directOperatorDefinition name=")" org.eventb.theory.core.formula="prj2(M)"/>
 </org.eventb.theory.core.newOperatorDefinition>
-<org.eventb.theory.core.theorem name="-" org.eventb.core.label="ident:" org.eventb.core.predicate="∀T, equ, op, ident·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ Monoid(T) ⇒ (∀x·x ∈ T ⇒ (((op(x ↦ ident) ↦ ident)∈equ) ⇔ ((x ↦ ident)∈equ)))"/>
-<org.eventb.theory.core.theorem name="." org.eventb.core.label="unique ident:" org.eventb.core.predicate="∀T, equ, op, ident·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ Monoid(T) ⇒ (∀oIdent·oIdent ∈ T ⇒ (((∀r·r ∈ T ⇒ (op(oIdent ↦ r) ↦ r)∈equ) ∨ (∀l·l ∈ T ⇒ (op(l ↦ oIdent) ↦ l)∈equ)) ⇔ ((oIdent ↦ ident)∈equ)))"/>
+<org.eventb.theory.core.theorem name="-" org.eventb.core.label="ident is ident left:" org.eventb.core.predicate="∀T, equ, op, ident·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ Monoid(T) ⇒ (∀x·x ∈ T ⇒ (op(x ↦ ident) ↦ x)∈equ)"/>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="ident is ident right:" org.eventb.core.predicate="∀T, equ, op, ident·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ Monoid(T) ⇒ (∀x·x ∈ T ⇒ (op(ident ↦ x) ↦ x)∈equ)"/>
+<org.eventb.theory.core.theorem name="/" org.eventb.core.label="ident:" org.eventb.core.predicate="∀T, equ, op, ident·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ Monoid(T) ⇒ (∀x·x ∈ T ⇒ (((op(x ↦ ident) ↦ ident)∈equ) ⇔ ((x ↦ ident)∈equ)))"/>
+<org.eventb.theory.core.theorem name="0" org.eventb.core.label="unique ident:" org.eventb.core.predicate="∀T, equ, op, ident·T ∈ ℙ(T_EvB) ∧ T ↦ equ ↦ op ↦ ident ∈ Monoid(T) ⇒ (∀oIdent·oIdent ∈ T ⇒ (((∀r·r ∈ T ⇒ (op(oIdent ↦ r) ↦ r)∈equ) ∨ (∀l·l ∈ T ⇒ (op(l ↦ oIdent) ↦ l)∈equ)) ⇔ ((oIdent ↦ ident)∈equ)))"/>
 </org.eventb.theory.core.theoryRoot>

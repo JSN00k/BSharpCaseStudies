@@ -6,8 +6,8 @@
 <org.eventb.core.psStatus name="AssocCommOp/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="BaseOpTheorem:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="BaseOpTheorem:/WD-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="BaseOpTheoremSimple Left:/S-THM" org.eventb.core.confidence="0" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="BaseOpTheoremSimple Left:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="BaseOpTheoremSimple Left:/WD-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="BaseOpTheoremSimple Right:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="0" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="BaseOpTheoremSimple Right:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="BaseOpTheoremSimple Right:/WD-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
 </org.eventb.core.psFile>

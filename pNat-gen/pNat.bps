@@ -8,28 +8,38 @@
 <org.eventb.core.psStatus name="addMon left right ident is unique1:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="addMon left right ident is unique2:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="addMon left right ident is unique:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="addMon ident:/S-THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="addMon unique ident:/S-THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="addMon RaiseToL Equiv Preservation:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="addMon RaiseToR Equiv Preservation:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="addMon RaiseToL addRule:/S-THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="addMon LeftPow equals RightPow:/S-THM" org.eventb.core.confidence="500" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="timesMon in CommMonoid/S-THM" org.eventb.core.confidence="-99" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="timesMon TypingTheorem raiseToL/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="timesMon TypingTheorem raiseToR/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="timesMon 2 left ident no right:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="timesMon 2 right ident no left:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="timesMon left right ident is unique1:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="timesMon left right ident is unique2:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="timesMon left right ident is unique:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="timesMon ident:/S-THM" org.eventb.core.confidence="500" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="timesMon unique ident:/S-THM" org.eventb.core.confidence="500" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="timesMon RaiseToL Equiv Preservation:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="timesMon RaiseToR Equiv Preservation:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="timesMon RaiseToL addRule:/S-THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="timesMon LeftPow equals RightPow:/S-THM" org.eventb.core.confidence="500" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="TypingTheorem decr/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="TypingTheorem minus/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="TypingTheorem divMod/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="inf1/S-INF" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addMon ident is ident left:/S-THM" org.eventb.core.confidence="500" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="addMon ident is ident right:/S-THM" org.eventb.core.confidence="500" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="addMon ident:/S-THM" org.eventb.core.confidence="500" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="addMon unique ident:/S-THM" org.eventb.core.confidence="500" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="addMon RaiseToL Equiv Preservation:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addMon RaiseToR Equiv Preservation:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addMon RaiseToL addRule:/S-THM" org.eventb.core.confidence="500" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="addMon LeftPow equals RightPow:/S-THM" org.eventb.core.confidence="500" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="Anything times zero on left:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="Zero times anything is Zero:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="sucX times Y:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="Distrib Left Times:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="Distrib Right Times:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="Times Associative:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="Times Commutative:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="timesMon in CommMonoid/S-THM" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="timesMon TypingTheorem raiseToL/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="timesMon TypingTheorem raiseToR/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="timesMon 2 left ident no right:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="timesMon 2 right ident no left:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="timesMon left right ident is unique1:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="timesMon left right ident is unique2:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="timesMon left right ident is unique:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="timesMon ident is ident left:/S-THM" org.eventb.core.confidence="500" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="timesMon ident is ident right:/S-THM" org.eventb.core.confidence="500" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="timesMon ident:/S-THM" org.eventb.core.confidence="500" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="timesMon unique ident:/S-THM" org.eventb.core.confidence="500" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="timesMon RaiseToL Equiv Preservation:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="timesMon RaiseToR Equiv Preservation:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="timesMon RaiseToL addRule:/S-THM" org.eventb.core.confidence="500" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="timesMon LeftPow equals RightPow:/S-THM" org.eventb.core.confidence="500" org.eventb.core.poStamp="17" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="TypingTheorem decr/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="TypingTheorem minus/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="TypingTheorem divMod/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

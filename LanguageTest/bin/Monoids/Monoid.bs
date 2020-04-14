@@ -5,6 +5,10 @@ Import SemiGroup.*
 Class Monoid[M] : SemiGroup (ident : M) 
   where ∀ x : M · equ(op(x, ident), x) ∧ equ(op(ident, x), x) {
 	Theorems {
+		ident is ident left: //Makes this become a theorem with inheritance. TODO:Make axioms become theorems on inheritance.
+		  ∀ x : M · equ(op(x, ident), x);
+		ident is ident right:
+		  ∀ x : M · equ(op(ident, x), x);
 		ident:
 			∀ x : M · equ(op(x, ident), ident) ⇔ equ(x,  ident);
 			

@@ -2,6 +2,6 @@
 <org.eventb.core.psFile>
 <org.eventb.core.psStatus name="Setoid_equ/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="sym iff:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="TransInverse:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="TransRewrite:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="TransInverse:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="1" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="TransRewrite:/S-THM" org.eventb.core.confidence="1000" org.eventb.core.contextDependent="true" org.eventb.core.poStamp="1" org.eventb.core.psManual="true"/>
 </org.eventb.core.psFile>

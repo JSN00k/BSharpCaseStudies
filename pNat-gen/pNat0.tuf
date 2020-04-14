@@ -32,4 +32,7 @@
 <org.eventb.theory.core.theorem name="/" org.eventb.core.label="pNat_Setoid in Setoid" org.eventb.core.predicate="pNat ↦ { x ↦ y ∣ x = y} ∈ Setoid(pNat)"/>
 <org.eventb.theory.core.theorem name="0" org.eventb.core.label="suc out of addition:" org.eventb.core.predicate="∀x, y·x ∈ pNat ∧ y ∈ pNat ⇒ ((x) pNat_add (suc(y)) = (suc((x) pNat_add (y))))"/>
 <org.eventb.theory.core.theorem name="1" org.eventb.core.label="add zero:" org.eventb.core.predicate="∀x·x ∈ pNat ⇒ ((x) pNat_add (zero) = (x))"/>
+<org.eventb.theory.core.theorem name="2" org.eventb.core.label="reduction:" org.eventb.core.predicate="∀x, y, z·x ∈ pNat ∧ y ∈ pNat ∧ z ∈ pNat ⇒ (((x) pNat_add (y) = (x) pNat_add (z)) ⇔ ((y) = (z)))"/>
+<org.eventb.theory.core.theorem name="3" org.eventb.core.label="Associative:" org.eventb.core.predicate="∀x, y, z·x ∈ pNat ∧ y ∈ pNat ∧ z ∈ pNat ⇒ ((x) pNat_add ((y) pNat_add (z)) = ((x) pNat_add (y)) pNat_add (z))"/>
+<org.eventb.theory.core.theorem name="4" org.eventb.core.label="Commutative:" org.eventb.core.predicate="∀x, y·x ∈ pNat ∧ y ∈ pNat ⇒ ((x) pNat_add (y) = (y) pNat_add (x))"/>
 </org.eventb.theory.core.theoryRoot>

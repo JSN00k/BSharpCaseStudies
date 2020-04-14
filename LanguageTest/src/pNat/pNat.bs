@@ -5,7 +5,7 @@ From Relations Import Relations.*
 Datatype pNat
 | zero
 | suc(prev : pNat) {
-	add(x, y : pNat) : pNat INFIX 100
+	add(x, y : pNat) : pNat INFIX 100 
 		match x {
 			| zero : y
 			| suc(xs) : suc(xs add y)
@@ -20,6 +20,12 @@ Datatype pNat
 		  ∀ x, y : pNat · x add suc(y) = suc(x add y);
 		add zero:
 		  ∀ x : pNat · x add zero = x;
+		reduction:
+		  ∀ x, y, z : pNat · x add y = x add z ⇔ y = z;
+		Associative:
+		  ∀ x, y, z : pNat · x add (y add z) = (x add y) add z;
+		Commutative:
+		  ∀ x, y : pNat · x add y = y add x;
 	}
 } 
 
@@ -28,6 +34,23 @@ CommMonoid.*
 
 Extend pNat (mon_Add) {
 	Instance CommMonoid<pNat>(add, zero) addMon (times = raiseToL) 
+	
+	Theorems {
+		Anything times zero on left:
+			∀ x : pNat · times(x, zero) = zero; 
+		Zero times anything is Zero:
+			∀ x : pNat · times(zero, x) = zero;
+		sucX times Y:
+			∀ x, y : pNat · times(suc(x), y) = y add times(x, y);
+		Distrib Left Times:
+			∀ x, y, z : pNat · times(x, y add z) = times(x, y) add times(x, z);
+		Distrib Right Times:
+			∀ x, y, z : pNat · times(y add z, x) = times(y, x) add times(z, x);
+		Times Associative:
+		    ∀ x, y, z : pNat · times(x, times(y, z)) = times(times(x, y), z);
+		Times Commutative:
+		    ∀ x, y : pNat · times(x, y) = times(y, x);
+	}
 	
 	Instance CommMonoid<pNat>(times, suc(zero)) timesMon (power = raiseToL) 
 }
