@@ -1085,4 +1085,9 @@
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="EquivRel/Op-WD"/>
+<org.eventb.core.prProof name="Setoid/Op-WD"/>
+<org.eventb.core.prProof name="sym iff:/WD-THM"/>
+<org.eventb.core.prProof name="TransInverse:/WD-THM"/>
+<org.eventb.core.prProof name="TransRewrite:/WD-THM"/>
 </org.eventb.core.prFile>

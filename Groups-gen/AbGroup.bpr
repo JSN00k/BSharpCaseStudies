@@ -1,2 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<org.eventb.core.prFile version="1"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="AbGroup/Op-WD"/>
+<org.eventb.core.prProof name="AbGroup_equ/Op-WD"/>
+<org.eventb.core.prProof name="AbGroup_op/Op-WD"/>
+<org.eventb.core.prProof name="AbGroup_ident/Op-WD"/>
+</org.eventb.core.prFile>

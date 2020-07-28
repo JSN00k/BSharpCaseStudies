@@ -1,34 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="T_EvB" org.eventb.core.type="ℙ(T_EvB)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="Setoid_equ/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="EquivRel/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀T⦂ℙ(T_EvB)·T∈ℙ(T_EvB)⇒(⊤⇒T∈dom(ReflexRel)∧ReflexRel∈ℙ(T_EvB) ⇸ ℙ(ℙ(T_EvB × T_EvB))∧T∈dom(SymetricRel)∧SymetricRel∈ℙ(T_EvB) ⇸ ℙ(ℙ(T_EvB × T_EvB))∧T∈dom(TransRel)∧TransRel∈ℙ(T_EvB) ⇸ ℙ(ℙ(T_EvB × T_EvB)))" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.newOperatorDefinition#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tcf|org.eventb.theory.core.scTheoryRoot#Relations|org.eventb.theory.core.scNewOperatorDefinition#T_EvF"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.newOperatorDefinition#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poSequent#EquivRel\/Op-WD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="Setoid/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀T⦂ℙ(T_EvB)·T∈ℙ(T_EvB)⇒(⊤⇒(∀S⦂ℙ(T_EvB)·S=T⇒T∈dom(EquivRel)∧EquivRel∈ℙ(T_EvB) ⇸ ℙ(ℙ(T_EvB × T_EvB))))" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.newOperatorDefinition#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tcf|org.eventb.theory.core.scTheoryRoot#Relations|org.eventb.theory.core.scNewOperatorDefinition#T_EvG"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.newOperatorDefinition#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poSequent#Setoid\/Op-WD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="Setoid_equ/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="2">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀T⦂ℙ(T_EvB),S⦂ℙ(T_EvB)×ℙ(T_EvB×T_EvB)·T∈ℙ(T_EvB)∧S∈ℙ(T_EvB) × ℙ(T_EvB × T_EvB)⇒(S∈Setoid(T)⇒S∈dom(prj2 ⦂ ℙ(ℙ(T_EvB)×ℙ(T_EvB×T_EvB)×ℙ(T_EvB×T_EvB)))∧(prj2 ⦂ ℙ(ℙ(T_EvB)×ℙ(T_EvB×T_EvB)×ℙ(T_EvB×T_EvB)))∈ℙ(T_EvB) × ℙ(T_EvB × T_EvB) ⇸ ℙ(T_EvB × T_EvB))" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.newOperatorDefinition#1"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tcf|org.eventb.theory.core.scTheoryRoot#Relations|org.eventb.theory.core.scNewOperatorDefinition#T_EvH"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.newOperatorDefinition#1"/>
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poSequent#Setoid_equ\/Op-WD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="sym iff:/S-THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Therorem Soundness" org.eventb.core.poStamp="0">
+<org.eventb.core.poSequent name="sym iff:/S-THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Therorem Soundness" org.eventb.core.poStamp="2">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀T⦂ℙ(T_EvB),s⦂ℙ(T_EvB×T_EvB)·T∈ℙ(T_EvB)∧s∈SymetricRel(T)⇒(∀x⦂T_EvB,y⦂T_EvB·x∈T∧y∈T⇒(x ↦ y∈s⇔y ↦ x∈s))" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.theorem#+"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tcf|org.eventb.theory.core.scTheoryRoot#Relations|org.eventb.theory.core.scTheorem#generatedBlocl"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.theorem#+"/>
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poSequent#sym iff:\/S-THM|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="TransInverse:/S-THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Therorem Soundness" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="sym iff:/WD-THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-Definedness of Theorem" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀T⦂ℙ(T_EvB)·T∈ℙ(T_EvB)⇒T∈dom(SymetricRel)∧SymetricRel∈ℙ(T_EvB) ⇸ ℙ(ℙ(T_EvB × T_EvB))" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.theorem#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tcf|org.eventb.theory.core.scTheoryRoot#Relations|org.eventb.theory.core.scTheorem#generatedBlocl"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.theorem#+"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poSequent#sym iff:\/WD-THM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="TransInverse:/S-THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Therorem Soundness" org.eventb.core.poStamp="2">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀T⦂ℙ(T_EvB),e⦂ℙ(T_EvB×T_EvB)·T∈ℙ(T_EvB)∧e∈EquivRel(T)⇒(∀x⦂T_EvB,y⦂T_EvB,z⦂T_EvB·x∈T∧y∈T∧z∈T⇒(x ↦ y∈e∧¬y ↦ z∈e⇒¬x ↦ z∈e))" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.theorem#."/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tcf|org.eventb.theory.core.scTheoryRoot#Relations|org.eventb.theory.core.scTheorem#generatedBlocm"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.theorem#."/>
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poSequent#TransInverse:\/S-THM|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="TransRewrite:/S-THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Therorem Soundness" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="TransInverse:/WD-THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-Definedness of Theorem" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀T⦂ℙ(T_EvB)·T∈ℙ(T_EvB)⇒T∈dom(EquivRel)∧EquivRel∈ℙ(T_EvB) ⇸ ℙ(ℙ(T_EvB × T_EvB))" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.theorem#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tcf|org.eventb.theory.core.scTheoryRoot#Relations|org.eventb.theory.core.scTheorem#generatedBlocm"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.theorem#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poSequent#TransInverse:\/WD-THM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="TransRewrite:/S-THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Therorem Soundness" org.eventb.core.poStamp="2">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀T⦂ℙ(T_EvB),e⦂ℙ(T_EvB×T_EvB)·T∈ℙ(T_EvB)∧e∈EquivRel(T)⇒(∀x⦂T_EvB,y⦂T_EvB,z⦂T_EvB·x∈T∧y∈T∧z∈T⇒(x ↦ y∈e⇒(x ↦ z∈e⇔y ↦ z∈e)))" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.theorem#\/"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tcf|org.eventb.theory.core.scTheoryRoot#Relations|org.eventb.theory.core.scTheorem#generatedBlocn"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.theorem#\/"/>
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poSequent#TransRewrite:\/S-THM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="TransRewrite:/WD-THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-Definedness of Theorem" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀T⦂ℙ(T_EvB)·T∈ℙ(T_EvB)⇒T∈dom(EquivRel)∧EquivRel∈ℙ(T_EvB) ⇸ ℙ(ℙ(T_EvB × T_EvB))" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.theorem#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tcf|org.eventb.theory.core.scTheoryRoot#Relations|org.eventb.theory.core.scTheorem#generatedBlocn"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Relations-gen/Relations.tuf|org.eventb.theory.core.theoryRoot#Relations|org.eventb.theory.core.theorem#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Relations-gen/Relations.bpo|org.eventb.core.poFile#Relations|org.eventb.core.poSequent#TransRewrite:\/WD-THM|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
 </org.eventb.core.poFile>

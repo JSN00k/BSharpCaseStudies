@@ -1,0 +1,22 @@
+package List
+
+Datatype List<T>
+| nil
+| cons(head : T, tail : List<T>) {
+	/* Returns nil, or a list with a single element, which avoids the necessity for a default element */
+	last(a : List<T>) : List<T>
+		match a {
+			| nil : a
+			| cons(e, t) : if (t = nil) {
+				cons(e, nil)
+			} else {
+				last(t)
+			}
+		}
+		
+	append(l : List<T>, a : T) : List<T>
+		match l {
+			| nil : cons(a, nil)
+			| cons(e, xl) : append(append(xl, a), e)
+		}
+}

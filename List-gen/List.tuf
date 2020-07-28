@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+<org.eventb.theory.core.datatypeDefinition name="'" org.eventb.core.identifier="List">
+<org.eventb.theory.core.typeArgument name="'" org.eventb.theory.core.givenType="T"/>
+<org.eventb.theory.core.datatypeConstructor name="(" org.eventb.core.identifier="nil"/>
+<org.eventb.theory.core.datatypeConstructor name=")" org.eventb.core.identifier="cons">
+<org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="head" org.eventb.theory.core.type="T"/>
+<org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="tail" org.eventb.theory.core.type="List(T)"/>
+</org.eventb.theory.core.datatypeConstructor>
+</org.eventb.theory.core.datatypeDefinition>
+<org.eventb.theory.core.typeParameter name="(" org.eventb.core.identifier="T"/>
+<org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="List_last" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(T)" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="a">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="a"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(e, t)" org.eventb.theory.core.formula="COND((t) = (nil), cons(e, nil), List_last(t))"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="List_last_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λa·a ∈ List(T) ∣ List_last(a)"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="+" org.eventb.core.label="TypingTheorem last" org.eventb.core.predicate="∀a·a ∈ List(T) ⇒ (List_last(a) ∈ (List(T)))"/>
+<org.eventb.theory.core.newOperatorDefinition name="," org.eventb.core.label="List_append" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="List(T)" org.eventb.core.identifier="l"/>
+<org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="T" org.eventb.core.identifier="a"/>
+<org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="l">
+<org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="nil" org.eventb.theory.core.formula="cons(a, nil)"/>
+<org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="cons(e, xl)" org.eventb.theory.core.formula="List_append(List_append(xl, a), e)"/>
+</org.eventb.theory.core.recursiveOperatorDefinition>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.newOperatorDefinition name="-" org.eventb.core.label="List_append_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+<org.eventb.theory.core.directOperatorDefinition name="'" org.eventb.theory.core.formula="λl ↦ a·l ∈ List(T) ∧ a ∈ T ∣ List_append(l, a)"/>
+</org.eventb.theory.core.newOperatorDefinition>
+<org.eventb.theory.core.theorem name="." org.eventb.core.label="TypingTheorem append" org.eventb.core.predicate="∀l, a·l ∈ List(T) ∧ a ∈ T ⇒ (List_append(l, a) ∈ (List(T)))"/>
+</org.eventb.theory.core.theoryRoot>
